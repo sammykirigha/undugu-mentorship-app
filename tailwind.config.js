@@ -12,12 +12,31 @@ module.exports = {
         text: "#ff6100",
         textWhite: "white",
       },
+      content: {
+        content: 'none !important',
+      },
     },
+    typography: {
+      DEFAULT: {
+        css: {
+          code: {
+            '&::before': {
+              content: 'none !important',
+            },
+            '&::after': {
+              content: 'none !important',
+            },
+          },
+        },
+      },
+    }
   },
   backgroundImage: {
     "bg-hero-image": "url('./public/home-page-photo.jpg')",
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/typography'),
+  ],
 
   // main color bg-color: #0f2757
   // text color: white and #ff6100
