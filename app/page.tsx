@@ -50,10 +50,12 @@ export default function Home() {
     <div className=" flex w-full mt-[95px] max-w-[1400px] mx-auto ">
       <div className="flex flex-col lg:flex-row items-start justify-center mt-12 gap-10 w-full pt-3 md:pt-0 px-3 2xl:px-0">
         <div className="  w-full lg:w-[60vw] ">
-          <Carousel>
+          <Carousel autoPlay={true} infiniteLoop={true}>
             <div>
               <Image src={image_one} alt="image" width={500} />
-              <p className="legend">Mentorship Session At Mwangeka Girls Wundanyi.</p>
+              <p className="legend">
+                Mentorship Session At Mwangeka Girls Wundanyi.
+              </p>
             </div>
             <div>
               <Image src={image_four} alt="image" width={500} />
@@ -61,7 +63,9 @@ export default function Home() {
             </div>
             <div>
               <Image src={image_one} alt="image" width={500} />
-              <p className="legend">Mentorship Session At Mwangeka Girls Wundanyi.</p>
+              <p className="legend">
+                Mentorship Session At Mwangeka Girls Wundanyi.
+              </p>
             </div>
           </Carousel>
         </div>
@@ -112,20 +116,25 @@ export default function Home() {
                 Our Motto
               </h1>
               <p className=" text-[1rem] text-primary">
-                <span className="text-text">Mentoring</span> 
-                <br></br>
-                A promising approach for youth development.
+                <span className="text-text">Mentoring</span>
+                <br></br>A promising approach for youth development.
               </p>
             </div>
           </div>
           {/* social links */}
           <div className=" flex flex-row gap-10 block py-4 lg:hidden xl:flex xl:inline-block">
             <Link
-              href={"/"}
+              legacyBehavior
+              href={"https://www.facebook.com/UnduguMentorship"}
               title="Undugu Mentorship Initiative on Facebook"
-              className="w-12 h-12 flex items-center justify-center bg-primary rounded-lg cursor-pointer"
             >
-              <BsFacebook className="w-8 h-8 text-white text-center bg-primary " />
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-12 h-12 flex items-center justify-center bg-primary rounded-lg cursor-pointer"
+              >
+                <BsFacebook className="w-8 h-8 text-white text-center bg-primary " />
+              </a>
             </Link>
             <Link
               href={"/"}
