@@ -25,7 +25,7 @@ export default function RootLayout({
       {/* <IndexPage /> */}
       <body className={inter.className}>
         <NavBar />
-        <main className='h-[85.3vh]'>
+        <main className='h-auto'>
           {children}
         </main>
         <Footer />
