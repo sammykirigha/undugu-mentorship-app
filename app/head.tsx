@@ -1,21 +1,10 @@
-import Head from "next/head";
 
-export default function IndexPage() {
+export default function Head() {
   return (
-    <div>
-      <Head>
-        <link
-          rel="stylesheet"
-          type="text/css"
-          charSet="UTF-8"
-          href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css"
-        />
-        <link
-          rel="stylesheet"
-          type="text/css"
-          href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
-        />
-      </Head>
-    </div>
+    <>
+     <title>Undugu mentorship program</title>
+     <meta content="width=device-width, initial-scale=1" name="viewport" />
+     <link ref="icon" href="/favicon.ico" />
+    </>
   );
 }

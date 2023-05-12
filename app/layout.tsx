@@ -1,5 +1,5 @@
 "use client"
-import './globals.css'
+import '../styles/globals.css'
 import { Inter } from 'next/font/google';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
@@ -22,13 +22,8 @@ export default function RootLayout({
   const router = useRouter()
   return (
     <html lang="en">
-      {/* <IndexPage /> */}
       <body className={inter.className}>
-        <NavBar />
-        <main className='h-auto'>
-          {children}
-        </main>
-        <Footer />
+        {children}
       </body>
     </html>
   )
