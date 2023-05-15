@@ -1,46 +1,37 @@
-"use client";
 
-import Image from "next/image";
+
 import { BsFacebook } from "react-icons/bs";
+import {groq} from "next-sanity";
 import { AiFillTwitterSquare, AiOutlineInstagram } from "react-icons/ai";
-import image_one from "../public/home-page-photo.jpg";
-import image_two from "../public/kituri_mentorship.jpg";
-import image_three from "../public/Mwangeka_girls.jpg";
-import image_four from "../public/Taru_boys.jpg";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
-import { Carousel } from "react-responsive-carousel";
 import Link from "next/link";
 import NavBar from "@/components/NavBar/page";
 import Footer from "@/components/footer/page";
+import CarouselPage from "@/components/Carousel";
+import { client } from "@/lib/sanity.client";
 
-export default function Home() {
+const query = groq`
+*[_type=='post'] {
+  ...,
+  author->,
+  categories->
+} | order(_createdAt desc)
+`;
 
+export default async function Home() {
+
+  const posts = await client.fetch(query)
+
+  console.log({posts});
+  
+  
   return (
     <div>
       <NavBar />
 
       <div className=" flex w-full mt-[95px] max-w-[1400px] mx-auto ">
         <div className="flex flex-col lg:flex-row items-start justify-center mt-12 gap-10 w-full pt-3 md:pt-0 px-3 2xl:px-0">
-          <div className="  w-full lg:w-[60vw] ">
-            <Carousel autoPlay={true} infiniteLoop={true}>
-              <div>
-                <Image src={image_one} alt="image" width={500} />
-                <p className="legend">
-                  Mentorship Session At Mwangeka Girls Wundanyi.
-                </p>
-              </div>
-              <div>
-                <Image src={image_four} alt="image" width={500} />
-                <p className="legend">Mentorship Session At Taru Boys Voi.</p>
-              </div>
-              <div>
-                <Image src={image_one} alt="image" width={500} />
-                <p className="legend">
-                  Mentorship Session At Mwangeka Girls Wundanyi.
-                </p>
-              </div>
-            </Carousel>
-          </div>
+          <CarouselPage />
           <div className=" w-full lg:w-auto flex flex-col items-center justify-center items-start justify-between h-[550px]">
             <div className="w-full flex flex-col items-start">
               <div className="w-full ">
@@ -131,3 +122,5 @@ export default function Home() {
     </div>
   );
 }
+
+

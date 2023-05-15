@@ -1,9 +1,9 @@
 "use client"
-import '../styles/globals.css'
+import '../../styles/globals.css'
 import { Inter } from 'next/font/google';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
-import IndexPage from './head';
+import IndexPage from '../head';
 import NavBar from '@/components/NavBar/page';
 import Footer from '@/components/footer/page';
 

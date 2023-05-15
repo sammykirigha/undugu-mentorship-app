@@ -7,7 +7,7 @@ function StudioNavbar(props: any) {
     <div>
       <div className="flex items-center justify-between p-5">
         <Link href="/" className="text-text flex items-center gap-2">
-          <ArrowUturnLeftIcon className="h-6 w-6 text-text" />
+          <ArrowUturnLeftIcon className="!h-6 !w-6 text-text" />
           Go to Website
         </Link>
         <div className="hidden md:flex p-5 rounded-lg justify-center border-2 border-text">
