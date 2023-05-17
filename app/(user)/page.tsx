@@ -1,5 +1,4 @@
 
-
 import { BsFacebook } from "react-icons/bs";
 import {groq} from "next-sanity";
 import { AiFillTwitterSquare, AiOutlineInstagram } from "react-icons/ai";
@@ -23,7 +22,6 @@ export default async function Home() {
   const posts = await client.fetch(query)
 
   console.log({posts});
-  
   
   return (
     <div>
