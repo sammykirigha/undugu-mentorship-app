@@ -8,6 +8,7 @@ import NavBar from "@/components/NavBar/page";
 import Footer from "@/components/footer/page";
 import CarouselPage from "@/components/Carousel";
 import { client } from "@/lib/sanity.client";
+import { draftMode } from "next/headers";
 
 const query = groq`
 *[_type=='post'] {
@@ -17,16 +18,19 @@ const query = groq`
 } | order(_createdAt desc)
 `;
 
+async function getData(){
+  const {isEnabled} = draftMode();
+  return isEnabled;
+}
+
 export default async function Home() {
-
+  const isEnabled = await getData()
   const posts = await client.fetch(query)
-
-  console.log({posts});
+  console.log({posts},"<<<<<>>>>", {isEnabled});
   
   return (
     <div>
       <NavBar />
-
       <div className=" flex w-full mt-[95px] max-w-[1400px] mx-auto ">
         <div className="flex flex-col lg:flex-row items-start justify-center mt-12 gap-10 w-full pt-3 md:pt-0 px-3 2xl:px-0">
           <CarouselPage />
