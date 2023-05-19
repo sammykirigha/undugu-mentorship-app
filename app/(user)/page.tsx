@@ -1,14 +1,15 @@
 
-import { BsFacebook } from "react-icons/bs";
 import {groq} from "next-sanity";
+import { BsFacebook } from "react-icons/bs";
 import { AiFillTwitterSquare, AiOutlineInstagram } from "react-icons/ai";
-import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import Link from "next/link";
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import NavBar from "@/components/NavBar/page";
 import Footer from "@/components/footer/page";
 import CarouselPage from "@/components/Carousel";
 import { client } from "@/lib/sanity.client";
 import { draftMode } from "next/headers";
+import RecentEvents from "@/components/RecentEvents";
 
 const query = groq`
 *[_type=='post'] {
@@ -119,7 +120,10 @@ export default async function Home() {
           </div>
         </div>
       </div>
-
+      
+      <div className="mt-6 max-w-[1400px] mx-auto mb-14 px-3">
+          <RecentEvents />
+      </div>
       <Footer />
     </div>
   );

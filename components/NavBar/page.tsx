@@ -12,7 +12,7 @@ const NavBar = () => {
   const [showSearch, setShowSearch] = useState(false);
   const [showNavItems, setShowNavItems] = useState(false);
   return (
-    <nav className=" w-full top-0 bg-[#0f2757] h-auto text-white  fixed z-40 ">
+    <nav className=" w-full top-0 bg-blue h-auto text-white  fixed z-40 ">
       <div className=" flex justify-between items-center px-5 md:px-28 py-[15px]">
         <div className="">
           <Image
@@ -48,7 +48,7 @@ const NavBar = () => {
           </span>
         </div>
       </div>
-      <div className="bg-[#151538]  px-5 md:px-28 ">
+      <div className="bg-gradient-to-r from-[#185779] to-[#10425e]  px-5 md:px-28 ">
         <div className="flex gap-10 items-end justify-end md:justify-center">
           <ul className="hidden md:flex gap-10 py-2">
             <Link
