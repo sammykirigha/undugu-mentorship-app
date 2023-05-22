@@ -51,20 +51,33 @@ const NavBar = () => {
       <div className="bg-gradient-to-r from-[#185779] to-[#10425e]  px-5 md:px-28 ">
         <div className="flex gap-10 items-end justify-end md:justify-center">
           <ul className="hidden md:flex gap-10 py-2">
-            <Link
-              href="/about"
-              className="text-[1.2rem] text-white hover:text-text"
-            >
-              About
-            </Link>
-            <Link href="/" className="text-[1.2rem] text-white hover:text-text">
+          <Link 
+            onClick={() => setShowNavItems(false)}
+            href="/" 
+            className="text-[1.2rem] text-white hover:text-text">
               Home
             </Link>
             <Link
-              href="/signup"
+              href="/events"
+              onClick={() => setShowNavItems(false)}
               className="text-[1.2rem] text-white hover:text-text"
-            >
-              Sign Up
+              >
+              Our Events
+            </Link>
+
+            <Link
+              href="/about"
+              onClick={() => setShowNavItems(false)}
+              className="text-[1.2rem] text-white hover:text-text"
+              >
+              About
+            </Link>
+            <Link
+              href="/contact-us"
+              onClick={() => setShowNavItems(false)}
+              className="text-[1.2rem] text-white hover:text-text"
+              >
+              Contact Us
             </Link>
           </ul>
           <span 
@@ -76,13 +89,7 @@ const NavBar = () => {
         {
             showNavItems && 
         <ul className="flex flex-col gap-10 py-2 items-center">
-            <Link
-              href="/about"
-              onClick={() => setShowNavItems(false)}
-              className="text-[1.2rem] text-white hover:text-text"
-              >
-              About
-            </Link>
+          
             <Link 
             onClick={() => setShowNavItems(false)}
             href="/" 
@@ -90,11 +97,26 @@ const NavBar = () => {
               Home
             </Link>
             <Link
-             onClick={() => setShowNavItems(false)}
-              href="./app/components/signup"
+              href="/events"
+              onClick={() => setShowNavItems(false)}
               className="text-[1.2rem] text-white hover:text-text"
               >
-              Sign Up
+              Our Events
+            </Link>
+
+            <Link
+              href="/about"
+              onClick={() => setShowNavItems(false)}
+              className="text-[1.2rem] text-white hover:text-text"
+              >
+              About
+            </Link>
+            <Link
+              href="/contact-us"
+              onClick={() => setShowNavItems(false)}
+              className="text-[1.2rem] text-white hover:text-text"
+              >
+              Contact Us
             </Link>
           </ul>
             }

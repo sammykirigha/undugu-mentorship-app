@@ -28,16 +28,16 @@ function Footer() {
         </div>
       </div>
       <div className="h-auto bg-blue w-full px-12">
-        <div className="flex gap-20 items-center justify-center ">
+        <div className="flex flex-col md:flex-row gap-3 md:gap-20 items-start justify-center ">
           <div className=" mt-8">
-            <div className="mt-10">
+            <div className="mt-2">
               <h2 className="text-white text-[1rem]">
                 UnduguMentorshipProgram
               </h2>
               <p className="text-white text-[0.8rem] py-3">
                 Follow Us To Learn More
               </p>
-              <div className=" flex flex-row gap-4 block pb-5 lg:hidden xl:flex xl:inline-block">
+              <div className=" flex flex-row gap-4 pb-5 ">
                 <Link
                   legacyBehavior
                   href={"https://www.facebook.com/UnduguMentorship"}
@@ -64,7 +64,7 @@ function Footer() {
             <h1 className="text-white text-[1rem]  font-semibold ">
               The Organisation
             </h1>
-            <ul>
+            <ul className="">
               <li className="text-white text-[0.8rem] py-1 cursor-pointer hover:text-text">About</li>
               <li className="text-white text-[0.8rem] py-1 cursor-pointer hover:text-text">Events</li>
               <li className="text-white text-[0.8rem] py-1 cursor-pointer hover:text-text">Contact Us</li>
@@ -72,7 +72,7 @@ function Footer() {
           </div>
           
         </div>
-        <p className="py-3 text-white text-[0.9rem] text-center">
+        <p className="mt-4 py-3 text-white text-[0.7rem] text-center">
           Copyright © 2023 UnduguMentorship, Wundanyi{" "}
         </p>
       </div>

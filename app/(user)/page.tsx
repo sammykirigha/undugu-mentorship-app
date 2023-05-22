@@ -1,15 +1,15 @@
-
-import {groq} from "next-sanity";
+import { groq } from "next-sanity";
 import { BsFacebook } from "react-icons/bs";
 import { AiFillTwitterSquare, AiOutlineInstagram } from "react-icons/ai";
 import Link from "next/link";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import NavBar from "@/components/NavBar/page";
 import Footer from "@/components/footer/page";
-import CarouselPage from "@/components/Carousel";
 import { client } from "@/lib/sanity.client";
 import { draftMode } from "next/headers";
 import RecentEvents from "@/components/RecentEvents";
+import image_one from "../../public/Mentors_two.jpg";
+import Image from "next/image";
 
 const query = groq`
 *[_type=='post'] {
@@ -19,23 +19,35 @@ const query = groq`
 } | order(_createdAt desc)
 `;
 
-async function getData(){
-  const {isEnabled} = draftMode();
+async function getData() {
+  const { isEnabled } = draftMode();
   return isEnabled;
 }
 
 export default async function Home() {
-  const isEnabled = await getData()
-  const posts = await client.fetch(query)
-  console.log({posts},"<<<<<>>>>", {isEnabled});
-  
+  const isEnabled = await getData();
+  const posts = await client.fetch(query);
+  console.log({ posts }, "<<<<<>>>>", { isEnabled });
+
   return (
     <div>
-      <NavBar />
       <div className=" flex w-full mt-[95px] max-w-[1400px] mx-auto ">
         <div className="flex flex-col lg:flex-row items-start justify-center mt-12 gap-10 w-full pt-3 md:pt-0 px-3 2xl:px-0">
-          <CarouselPage />
-          <div className=" w-full lg:w-auto flex flex-col items-center justify-center items-start justify-between h-[550px]">
+          <div className="relative w-full">
+            <div className="bg-red-700 w-full">
+              <Image
+                src={image_one}
+                alt="image"
+                width={700}
+                height={450}
+                className="object-cover brightness-50 w-full bg-no-repeat"
+              />
+            </div>
+            <p className="absolute bottom-3 text-white text-[1rem] md:text-[1.5rem] lg:text-[2.0rem] font-semibold text-center px-2 ">
+              Mentorship Session At Mwangeka Girls Wundanyi.
+            </p>
+          </div>
+          <div className=" w-full lg:w-auto flex flex-col items-start justify-between h-auto ">
             <div className="w-full flex flex-col items-start">
               <div className="w-full ">
                 <h1
@@ -46,11 +58,12 @@ export default async function Home() {
                 >
                   Our Motivation
                 </h1>
-                <p className="text-[1.1rem] text-center text-text leading-tight font-headline mt-7">
+                <p className="text-[1.1rem] text-center text-text leading-tight font-headline mt-2">
                   Impacting Lives Through Mentorship.
                 </p>
               </div>
-              <div className="flex flex-col mt-5 hover:border-b-2 hover:border-primary pb-3 w-full">
+
+              <div className="flex flex-col mt-5 relative group pb-3 w-full">
                 <h1
                   className="text-primary  text-[1.3rem] font-[700] opacity-90 flex 
               items-center"
@@ -61,8 +74,10 @@ export default async function Home() {
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta
                   recusandae.
                 </p>
+                <div className="absolute hidden  group-hover:block inset-x-0  ease-in-out duration-700 bg-blue bottom-0 h-[2px]"></div>
               </div>
-              <div className="flex flex-col mt-5 hover:border-b-2 hover:border-primary pb-3 w-full">
+
+              <div className="flex flex-col mt-5 relative group pb-3 w-full">
                 <h1
                   className="text-primary text-[1.3rem] font-[700] opacity-90 flex 
               items-center"
@@ -73,8 +88,10 @@ export default async function Home() {
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta
                   recusandae.
                 </p>
+                <div className="absolute hidden group-hover:block inset-x-0  ease-in-out duration-700 bg-blue bottom-0 h-[2px]"></div>
               </div>
-              <div className="flex flex-col mt-5 hover:border-b-2 hover:border-primary pb-3 w-full">
+
+              <div className="flex flex-col mt-5 relative group pb-3 w-full">
                 <h1
                   className="text-primary text-[1.3rem] font-[700] opacity-90 flex 
               items-center"
@@ -85,10 +102,11 @@ export default async function Home() {
                   <span className="text-text">Mentoring</span>
                   <br></br>A promising approach for youth development.
                 </p>
+                <div className="absolute hidden group-hover:block inset-x-0  ease-in-out duration-700 bg-blue bottom-0 h-[2px]"></div>
               </div>
             </div>
             {/* social links */}
-            <div className=" flex flex-row gap-10 block py-4 lg:hidden xl:flex xl:inline-block">
+            <div className=" flex flex-row gap-10 lg:hidden 2xl:flex mt-8 xl:mt-[90px] 2xl:mt-[100px]">
               <Link
                 legacyBehavior
                 href={"https://www.facebook.com/UnduguMentorship"}
@@ -120,13 +138,11 @@ export default async function Home() {
           </div>
         </div>
       </div>
-      
-      <div className="mt-6 max-w-[1400px] mx-auto mb-14 px-3">
-          <RecentEvents />
+
+      <div className=" mt-6 max-w-[1400px] mx-auto mb-14 px-3 2xl:px-0">
+        <RecentEvents />
       </div>
-      <Footer />
+      
     </div>
   );
 }
-
-
