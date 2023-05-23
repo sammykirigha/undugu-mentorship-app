@@ -1,8 +1,8 @@
 import React from "react";
-import image1 from "./../public/mwangeka_girls_three.jpg";
-import image2 from "./../public/Mentors_two.jpg";
-import image3 from "./../public/Mentors_one.jpg";
-import image4 from "./../public/Mentors_two.jpg";
+import image1 from "./../../public/mwangeka_girls_three.jpg";
+import image2 from "./../../public/Mentors_two.jpg";
+import image3 from "./../../public/Mentors_one.jpg";
+import image4 from "./../../public/Mentors_two.jpg";
 import Image from "next/image";
 
 interface Props {}

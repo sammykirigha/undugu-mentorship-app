@@ -3,13 +3,11 @@ import { BsFacebook } from "react-icons/bs";
 import { AiFillTwitterSquare, AiOutlineInstagram } from "react-icons/ai";
 import Link from "next/link";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
-import NavBar from "@/components/NavBar/page";
-import Footer from "@/components/footer/page";
-import { client } from "@/lib/sanity.client";
 import { draftMode } from "next/headers";
-import RecentEvents from "@/components/RecentEvents";
-import image_one from "../../public/Mentors_two.jpg";
+import image_one from "../../../public/Mentors_two.jpg";
 import Image from "next/image";
+import RecentEvents from "@/src/components/RecentEvents";
+import { client } from "@/src/lib/sanity.client";
 
 const query = groq`
 *[_type=='post'] {

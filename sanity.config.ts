@@ -1,10 +1,10 @@
 import { defineConfig } from "sanity";
 import { deskTool } from "sanity/desk";
 import { visionTool } from "@sanity/vision";
-import { schemaTypes } from "./schemas";
+import { schemaTypes } from "./src/schemas";
 import { myTheme } from "./theme";
-import StudioNavbar from "./components/StudioNavBar";
-import Logo from "./components/Logo";
+import StudioNavbar from "./src/components/StudioNavBar";
+import Logo from "./src/components/Logo";
 
 const projectId = process.env.NEXT_PUBLIC_PROJECT_ID!;
 const dataset = process.env.NEXT_PUBLIC_DATASET!;

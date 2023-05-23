@@ -6,7 +6,7 @@ import Link from "next/link";
 import { BsSearch } from "react-icons/bs";
 import { MdMenu } from "react-icons/md";
 
-import logo from "./../../public/logo-two.jpg";
+import logo from "./../../../public/logo-two.jpg";
 
 const NavBar = () => {
   const [showSearch, setShowSearch] = useState(false);
