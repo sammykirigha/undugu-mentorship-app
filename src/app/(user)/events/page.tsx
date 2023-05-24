@@ -4,8 +4,6 @@ import image from "../../../../public/Mentors_two.jpg";
 import image2 from "../../../../public/Mentors_one.jpg";
 import image3 from "../../../../public/Mwangeka_girls.jpg";
 import image4 from "../../../../public/mwangeka_girls_three.jpg";
-import image6 from "../../../../public/Taru_boys.jpg";
-import image7 from "../../../../public/kombenyi_girls.jpg";
 import image8 from "../../../../public/home-page-photo.jpg";
 import Link from "next/link";
 import { SiFacebook } from "react-icons/si";
@@ -192,6 +190,7 @@ function Page(props: Props) {
               height={350}
               width={600}
               className="object-cover "
+              sizes="100vw"
             />
             <div className="flex flex-col absolute bottom-0 left-0 right-0 p-4 text-left transition-all ease-in-out duration-200 bg-gradient-to-t from-primary">
               <p className="text-white text-[1rem] leading-[1.1rem] font-[700]">
