@@ -2,7 +2,6 @@ import image from "next/image";
 import React from "react";
 import { SiFacebook } from "react-icons/si";
 import { BsTwitter, BsInstagram } from "react-icons/bs";
-import { AiOutlineInstagram } from "react-icons/ai";
 import Link from "next/link";
 
 function Footer() {
