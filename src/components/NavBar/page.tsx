@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { BsSearch } from "react-icons/bs";
@@ -11,8 +11,31 @@ import logo from "./../../../public/logo-two.jpg";
 const NavBar = () => {
   const [showSearch, setShowSearch] = useState(false);
   const [showNavItems, setShowNavItems] = useState(false);
+
+  const [navBg, setNavBg] = useState("bg-transparent");
+
+  useEffect(() => {
+
+    const handleScroll = () => {
+      if (window.scrollY > 80) {
+        setNavBg("bg-black/60")
+      } else {
+        setNavBg("bg-transparent")
+      }
+    }
+
+    handleScroll()
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    }
+  }, [])
+
+
   return (
-    <nav className=" w-full top-0 bg-blue h-auto text-white  fixed z-40 ">
+    <nav className={`fixed top-0 z-40 w-full h-auto text-white ${navBg}`}>
       <div className=" flex justify-between items-center px-5 md:px-28 py-[15px]">
         <div className="">
           <Image
@@ -38,7 +61,7 @@ const NavBar = () => {
           )}
         </div>
 
-        <div className="hidden md:flex items-center">
+        <div className="items-center hidden md:flex">
           <input
             className="bg-white h-[40px] md:w-[350px] rounded-l-sm px-3 text-slate-900 text-[0.9rem]"
             placeholder="Search..."
@@ -48,20 +71,20 @@ const NavBar = () => {
           </span>
         </div>
       </div>
-      <div className="bg-gradient-to-r from-[#185779] to-[#10425e]  px-5 md:px-28 ">
-        <div className="flex gap-10 items-end justify-end md:justify-center">
-          <ul className="hidden md:flex gap-10 py-2">
-          <Link 
-            onClick={() => setShowNavItems(false)}
-            href="/" 
-            className="text-[1.2rem] text-white hover:text-text">
+      <div className="px-5 bg-transparent md:px-28 ">
+        <div className="flex items-end justify-end gap-10 md:justify-center">
+          <ul className="hidden gap-10 py-2 md:flex">
+            <Link
+              onClick={() => setShowNavItems(false)}
+              href="/"
+              className="text-[1.2rem] text-white hover:text-text">
               Home
             </Link>
             <Link
               href="/events"
               onClick={() => setShowNavItems(false)}
               className="text-[1.2rem] text-white hover:text-text"
-              >
+            >
               Our Events
             </Link>
 
@@ -69,38 +92,38 @@ const NavBar = () => {
               href="/about"
               onClick={() => setShowNavItems(false)}
               className="text-[1.2rem] text-white hover:text-text"
-              >
+            >
               About
             </Link>
             <Link
               href="/contact-us"
               onClick={() => setShowNavItems(false)}
               className="text-[1.2rem] text-white hover:text-text"
-              >
+            >
               Contact Us
             </Link>
           </ul>
-          <span 
-          onClick={() => setShowNavItems(!showNavItems)}
-          className="md:hidden">
-            <MdMenu className="text-white text-lg h-10 w-10 cursor-pointer" />
+          <span
+            onClick={() => setShowNavItems(!showNavItems)}
+            className="md:hidden">
+            <MdMenu className="w-10 h-10 text-lg text-white cursor-pointer" />
           </span>
         </div>
         {
-            showNavItems && 
-        <ul className="flex flex-col gap-10 py-2 items-center">
-          
-            <Link 
-            onClick={() => setShowNavItems(false)}
-            href="/" 
-            className="text-[1.2rem] text-white hover:text-text">
+          showNavItems &&
+          <ul className="flex flex-col items-center gap-10 py-2">
+
+            <Link
+              onClick={() => setShowNavItems(false)}
+              href="/"
+              className="text-[1.2rem] text-white hover:text-text">
               Home
             </Link>
             <Link
               href="/events"
               onClick={() => setShowNavItems(false)}
               className="text-[1.2rem] text-white hover:text-text"
-              >
+            >
               Our Events
             </Link>
 
@@ -108,19 +131,21 @@ const NavBar = () => {
               href="/about"
               onClick={() => setShowNavItems(false)}
               className="text-[1.2rem] text-white hover:text-text"
-              >
+            >
               About
             </Link>
             <Link
               href="/contact-us"
               onClick={() => setShowNavItems(false)}
               className="text-[1.2rem] text-white hover:text-text"
-              >
+            >
               Contact Us
             </Link>
           </ul>
-            }
+        }
       </div>
+
+      <hr className="opacity-40" />
     </nav>
   );
 };
