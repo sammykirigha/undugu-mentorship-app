@@ -18,6 +18,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   const router = useRouter()
+
   return (
     <html lang="en">
       <body className={inter.className}>
@@ -28,3 +29,6 @@ export default function RootLayout({
     </html>
   )
 }
+
+
+
