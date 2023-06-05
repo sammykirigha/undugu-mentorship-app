@@ -3,6 +3,7 @@ import '../../styles/globals.css'
 import NavBar from '@/src/components/NavBar/page';
 import Footer from '@/src/components/footer/page';
 import { Metadata } from 'next';
+import { useRouter } from 'next/router';
 
 
 export const metadata: Metadata = {
@@ -16,6 +17,8 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
+  const router = useRouter()
+
   return (
     <html lang="en">
       <body>

@@ -1,5 +1,7 @@
 import { CheckCircleIcon } from "@heroicons/react/24/solid";
 import Link from "next/link";
+import { BsFacebook } from "react-icons/bs";
+import { AiFillTwitterSquare, AiOutlineInstagram } from "react-icons/ai";
 
 export default async function Home() {
   return (
@@ -16,6 +18,64 @@ export default async function Home() {
               <Link href="about" className="px-8 py-3 text-lg transition bg-white rounded hover:bg-darkBlue hover:text-white">About Us</Link>
               <Link href="events" className="bg-[#1ea2a0] px-8 text-white py-3 hover:bg-darkBlue rounded text-lg hover:text-white transition">Our Events</Link>
             </div>
+
+            <div className="flex flex-col mt-3 relative group pb-3 ">
+              <h1
+                className="text-primary text-[1.3rem] font-[700] opacity-90 flex 
+              items-center"
+              >
+                Our Vission
+              </h1>
+              <p className=" text-[1rem] text-primary">
+                To improve the well being of the society by transforming the
+                thinking of young generation to take responsibility for their
+                lives by making informed decisions
+              </p>
+              <div className="absolute hidden group-hover:block inset-x-0  ease-in-out duration-700 bg-blue bottom-0 h-[2px]"></div>
+            </div>
+
+            <div className="flex flex-col mt-3 relative group pb-3 w-full ">
+              <h1
+                className="text-primary text-[1.3rem] font-[700] opacity-90 flex 
+              items-center"
+              >
+                Our Motto
+              </h1>
+              <p className=" text-[1rem] text-primary">
+                Giving back to society
+              </p>
+              <div className="absolute hidden group-hover:block inset-x-0  ease-in-out duration-700 bg-blue bottom-0 h-[2px]"></div>
+            </div>
+          </div>
+          {/* social links */}
+          <div className=" flex flex-row gap-10 lg:hidden 2xl:flex ">
+            <Link
+              legacyBehavior
+              href={"https://www.facebook.com/UnduguMentorship"}
+              title="Undugu Mentorship Initiative on Facebook"
+            >
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-8 h-8 flex items-center justify-center bg-primary rounded-lg cursor-pointer"
+              >
+                <BsFacebook className="w-8 h-8 text-white text-center bg-primary rounded-lg " />
+              </a>
+            </Link>
+            <Link
+              href={"/"}
+              title="Undugu Mentorship Initiative on Twitter"
+              className="w-8 h-8 flex items-center justify-center bg-primary rounded-lg cursor-pointer"
+            >
+              <AiFillTwitterSquare className="w-8 h-8 text-white text-center bg-primary rounded-lg" />
+            </Link>
+            <Link
+              href={"/"}
+              title="Undugu Mentorship Initiative on Instagram"
+              className="w-8 h-8 flex items-center justify-center bg-primary rounded-lg cursor-pointer"
+            >
+              <AiOutlineInstagram className="w-8 h-8 text-white text-center bg-primary rounded-lg " />
+            </Link>
           </div>
         </div>
       </div>
