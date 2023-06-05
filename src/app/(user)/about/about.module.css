@@ -1,0 +1,144 @@
+.aboutUsP {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.ourJourney {
+  display: flex;
+  justify-content: center;
+  width: 80%;
+}
+
+.journeyHeader {
+  width: 50%;
+  font-weight: bolder;
+  font-size: 55px;
+}
+
+.journeryP {
+  width: 50%;
+}
+
+.imgStlyes {
+  position: relative !important;
+  width: 30% !important;
+  border-radius: 10px;
+}
+
+.divImg {
+  display: flex;
+  width: 80%;
+  gap: 40px;
+}
+
+.customerQoute {
+  width: 80%;
+  text-align: center;
+}
+
+.coaching {
+  width: 80%;
+  display: flex;
+  gap: 97px;
+}
+
+.coachingImg {
+  width: 50%;
+}
+
+.coachingDes {
+  width: 50%;
+}
+
+.imgCoaching {
+  width: 100% !important;
+  position: relative !important;
+  border-radius: 10px;
+}
+
+.approach {
+  display: flex;
+  width: 80%;
+  gap: 40px;
+}
+
+.life {
+  width: 50%;
+  gap: 32px;
+  display: flex;
+  flex-direction: column;
+}
+
+.lifeApproach {
+  width: 50%;
+}
+
+.approachHeader {
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.teams {
+  width: 80%;
+}
+
+.teamdes {
+  padding-top: 20px;
+}
+
+/* responsiveness */
+@media (max-width: 640px) {
+  .ourJourney {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .journeyHeader {
+    width: 100%;
+  }
+
+  .journeryP {
+    width: 100%;
+  }
+
+  .divImg {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .imgStlyes {
+    width: 100% !important;
+  }
+
+  .coaching {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .coachingDes {
+    width: 100%;
+  }
+
+  .approach {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .life {
+    width: 100%;
+  }
+
+  .lifeApproach {
+    width: 100%;
+  }
+}
+
+@media (max-width: 1280px) {
+  .ourJourney {
+    display: flex;
+    gap: 58px;
+  }
+}
