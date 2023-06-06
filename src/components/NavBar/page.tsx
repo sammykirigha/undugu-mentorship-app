@@ -18,7 +18,7 @@ const NavBar = () => {
 
     const handleScroll = () => {
       if (window.scrollY > 80) {
-        setNavBg("bg-black/60")
+        setNavBg("bg-black/70")
       } else {
         setNavBg("bg-transparent")
       }
@@ -35,7 +35,7 @@ const NavBar = () => {
 
 
   return (
-    <nav className={`fixed top-0 z-40 w-full h-auto text-white ${navBg}`}>
+    <nav className={`fixed top-0 z-40 w-full h-auto text-white bg-black/60`}>
       <div className=" flex justify-between items-center px-5 md:px-28 py-[15px]">
         <div className="">
           <Image
