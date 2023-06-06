@@ -1,9 +1,11 @@
 import { CheckCircleIcon } from "@heroicons/react/24/solid";
+import Image from "next/image";
 import Link from "next/link";
+import image from "../../../public/Our_MP.jpg";
 
 export default async function Home() {
   return (
-    <div className="bg-black/80">
+    <div className="bg-white">
       <div className="relative bg-hero-pattern bg-cover before:z-10 bg-center before:bg-[black]/70 before:h-[100%] before:absolute before:w-full">
         <div className="min-h-[60vh] flex-col  flex pt-[130px] bg-slate-100_">
           <div className="container z-20 flex flex-col items-center justify-center flex-1 h-full p-2 sm:p-4 lg:p-0">
@@ -104,7 +106,152 @@ export default async function Home() {
         </div>
       </div>
 
-      
+      <div className="flex flex-col bg-white items-center justify-center mt-8 px-10">
+        <h1 className="text-[1.6rem] font-[700] text-slate-600 text-center">
+          Over 100 students have benefited from this program
+        </h1>
+        <p className="text-[1.2rem] text-slate-500 leading-[1rem] mt-2 text-center ">
+          Here are some of their success stories
+        </p>
+        <div className="mt-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-center place-items-center">
+            <div className="relative w-full md:w-72 flex flex-col items-center justify-center">
+              <Image
+                src={image}
+                alt=""
+                className="h-16 w-16 rounded-full absolute top-0 right-[40%]  "
+              />
+              <div className="shadow-lg mt-5 border-t-2 border-t-slate-900 flex flex-col items-center justify-center px-3 py-5 ">
+                <div className="mt-8">
+                  <h2 className="text-[1.1rem] text-primary font-[400]">
+                    Samuel Kirigha
+                  </h2>
+                  <p className="text-[0.9rem] text-slate-600">
+                    Software Engineer
+                  </p>
+                </div>
+                <div
+                  className="h-32
+              overflow-auto scrollbar scrollbar-thumb-slate-300 scrollbar-w-3 
+              scrollbar-track-white scrollbar-thumb-rounded-lg  mt-5"
+                >
+                  <p className="">
+                    Lorem ipsum dolor sit amet consectetur adipisicing
+                    elit.Ducimus laborum quis fugit quasi vero ad placeat
+                    tempora repudiandae libero nam.Lorem ipsum dolor sit amet
+                    consectetur adipisicing elit. Ducimus laborum quis fugit
+                    quasi vero ad placeat tempora repudiandae libero nam.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className="relative w-full md:w-72 flex flex-col items-center justify-center">
+              <Image
+                src={image}
+                alt=""
+                className="h-16 w-16 rounded-full absolute top-0 right-[40%]  "
+              />
+              <div className="shadow-lg mt-5 border-t-2 border-t-slate-900 flex flex-col items-center justify-center px-3 py-5 ">
+                <div className="mt-8">
+                  <h2 className="text-[1.1rem] text-primary font-[400]">
+                    Samuel Kirigha
+                  </h2>
+                  <p className="text-[0.9rem] text-slate-600">
+                    Software Engineer
+                  </p>
+                </div>
+                <div
+                  className="h-32
+              overflow-auto scrollbar scrollbar-thumb-slate-300 scrollbar-w-3 
+              scrollbar-track-white scrollbar-thumb-rounded-lg  mt-5"
+                >
+                  <p className="">
+                    Lorem ipsum dolor sit amet consectetur adipisicing
+                    elit.Ducimus laborum quis fugit quasi vero ad placeat
+                    tempora repudiandae libero nam.Lorem ipsum dolor sit amet
+                    consectetur adipisicing elit. Ducimus laborum quis fugit
+                    quasi vero ad placeat tempora repudiandae libero nam.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className="relative w-full md:w-72 flex flex-col items-center justify-center">
+              <Image
+                src={image}
+                alt=""
+                className="h-16 w-16 rounded-full absolute top-0 right-[40%]  "
+              />
+              <div className="shadow-lg mt-5 border-t-2 border-t-slate-900 flex flex-col items-center justify-center px-3 py-5 ">
+                <div className="mt-8">
+                  <h2 className="text-[1.1rem] text-primary font-[400]">
+                    Samuel Kirigha
+                  </h2>
+                  <p className="text-[0.9rem] text-slate-600">
+                    Software Engineer
+                  </p>
+                </div>
+                <div
+                  className="h-32
+              overflow-auto scrollbar scrollbar-thumb-slate-300 scrollbar-w-3 
+              scrollbar-track-white scrollbar-thumb-rounded-lg  mt-5"
+                >
+                  <p className="">
+                    Lorem ipsum dolor sit amet consectetur adipisicing
+                    elit.Ducimus laborum quis fugit quasi vero ad placeat
+                    tempora repudiandae libero nam.Lorem ipsum dolor sit amet
+                    consectetur adipisicing elit. Ducimus laborum quis fugit
+                    quasi vero ad placeat tempora repudiandae libero nam.
+                  </p>
+                </div>
+              </div>
+            </div>
+           
+           
+          </div>
+        </div>
+      </div>
+
+      <div className="mt-10 bg-white flex flex-col items-center justify-center">
+        <div className="flex gap-5">
+          <span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={1.5}
+              stroke="currentColor"
+              className="w-10 h-10 text-primary cursor-pointer"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M11.25 9l-3 3m0 0l3 3m-3-3h7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+              />
+            </svg>
+          </span>
+          <span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={1.5}
+              stroke="currentColor"
+              className="w-10 h-10 text-primary cursor-pointer"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M12.75 15l3-3m0 0l-3-3m3 3h-7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+              />
+            </svg>
+          </span>
+        </div>
+        <div className="my-10 bg-gray-100 transform hover:-translate-y-0.5 transition duration-300">
+          <button className=" py-2 px-7 w-fit rounded-md shadow-md  ">
+            Read More Testimonials
+          </button>
+        </div>
+      </div>
 
       <div className="bg-[#F7F8F9]">
         <div className="min-h-[500px] flex flex-col justify-center items-center bg-[url(/assets/overlay-cta.png)] bg-cover bg-no-repeat bg-center bg-opacity-80 p-2">

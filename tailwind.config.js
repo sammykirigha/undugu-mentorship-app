@@ -19,7 +19,10 @@ module.exports = {
       }),
     },
   },
-  plugins: [require("@tailwindcss/line-clamp"), require("flowbite/plugin")],
+  plugins: [
+    require("@tailwindcss/line-clamp"), require("flowbite/plugin"),
+    require('tailwind-scrollbar')({ nocompatible: true }),
+  ],
 
   // main color bg-color: #0f2757
   // text color: white and #ff6100

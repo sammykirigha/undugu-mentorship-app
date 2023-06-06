@@ -10,7 +10,7 @@ function Footer() {
       <div className="w-full flex items-center justify-center opacity-90 px-5 md:px-0 bg-gradient-to-r from-[#105175] to-[#032030]">
         <div className="flex flex-col items-center py-8">
           <h2 className="text-white text-[1.5rem]  font-semibold ">
-            Nesletter Sign Up
+            Newsletter Sign Up
           </h2>
           <p className="text-white text-[0.9rem] md:text-[1.1rem] leading-[1.3rem] py-3 text-center">
             Send me a notification on the upcoming and current events!
