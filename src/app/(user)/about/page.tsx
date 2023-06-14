@@ -17,21 +17,14 @@ function About() {
       <section className="container flex justify-center my-24 w-98 py-1.5 ">
         <div className={style.ourJourney}>
           <h1 className={style.journeyHeader}>
-            Our Journey of Personal Growth and Development
+            About Undugu Mentorship Initiative
           </h1>
           <p className={style.journeryP}>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus
-            neque eos blanditiis saepe ea sequi excepturi non deserunt
-            accusantium eligendi quasi cum minima provident, laborum quisquam,
-            deleniti rem possimus. Cum vitae excepturi neque alias incidunt,
-            voluptatum expedita molestias. Ea illum voluptate, repellat officia
-            magni praesentium temporibus iusto odit eos obcaecati sunt facilis
-            corporis, ullam dolorem aut ducimus velit nihil? Autem delectus
-            iusto facere quod illum id recusandae? Amet ex cupiditate rem
-            eveniet corrupti incidunt ullam quam, explicabo ab temporibus
-            reprehenderit veritatis consequatur laborum voluptate. Quae, ullam
-            suscipit. Atque nisi quos quas, velit eligendi repudiandae harum
-            cupiditate ad omnis iste obcaecati.
+            The organization envisages every responsible adult taking
+            responsibility to offer support, guidance and motivation to the
+            younger generation. We have a pool of mentors working with various
+            schools in the entire Coastal region. Our mentorship curruculum is
+            professionally structured to achieve intended results.
           </p>
         </div>
       </section>
@@ -77,12 +70,10 @@ function About() {
       <section className="container flex content-center py-0.5 justify-center my-8">
         <div className={style.customerQoute}>
           <p>
-            "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugit,
-            mollitia? Sint corporis qui blanditiis nemo, nobis saepe nostrum
-            quod facere dolore soluta eligendi debitis hic ipsa doloremque at,
-            rem temporibus laudantium officiis, accusamus eum ducimus! Quas
-            unde, quo inventore quisquam magni quasi ipsum quam dolorem ipsa
-            blanditiis deserunt animi amet?"
+            The mentees gain by boosting their self-esteem, confidence and
+            desire to excel as well as valuable lessons on life skills, career,
+            positive attitude, avoidance of social evils such as drug abuse,
+            immorality and risky behaviors.
           </p>
         </div>
       </section>
@@ -292,29 +283,20 @@ function About() {
       <section className="container flex content-center py-0.5 justify-center my-8">
         <div className={style.approach}>
           <div className={style.life}>
-            <h1 className="font-semibold">
-              Holistic Approach to Coaching Ensures That You Achieve Balance in
-              All Areas of Life
-            </h1>
-            <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sunt,
-              sequi rerum, aut et iure labore eveniet quisquam itaque officia
-              aperiam recusandae consectetur. Adipisci inventore laboriosam
-              illum eos minima nihil ducimus.
-            </p>
+            <h1 className={style.approachHeader}>Our Motto</h1>
+            <p>Giving back to society</p>
             <h1 className={style.approachHeader}>Our Vision</h1>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores
-              aspernatur tenetur repellat delectus nulla tempora, molestias odit
-              officiis optio! Consectetur aperiam possimus numquam deleniti
-              blanditiis excepturi eius quae quia a?
+              To improve the well being of the society by transforming the
+              thinking of young generation to take responsibility for their
+              lives by making informed decisions
             </p>
             <h1 className={style.approachHeader}>Our Mission</h1>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores
-              aspernatur tenetur repellat delectus nulla tempora, molestias odit
-              officiis optio! Consectetur aperiam possimus numquam deleniti
-              blanditiis excepturi eius quae quia a?
+              We will partner with interest groups in Education, Religion, NGOs,
+              Government among others in reaching out to the youth to affect
+              them positively and empower them to make decisions that will
+              ultimately improve their way of life
             </p>
           </div>
           <div className={style.lifeApproach}>
@@ -337,16 +319,14 @@ function About() {
         <div className={style.teams}>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
             <div className="flex flex-col justify-center">
-              <h1 className={style.approachHeader}>Meet Our Awesome Coach</h1>
-              <p className={style.teamdes}>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                Architecto perspiciatis quae molestiae distinctio qui cupiditate
-                vitae dolorem voluptatibus beatae! Sed quos aspernatur quisquam
-                ex quod ea iste quam sapiente cupiditate neque temporibus unde,
-                consequuntur officiis dicta optio soluta tempore reprehenderit
-                ab quae maiores consequatur. Obcaecati quidem vitae ut
-                voluptatem aliquam.
-              </p>
+              <h1 className={style.approachHeader}>Our Values</h1>
+              <ul>
+                <li>Philanthropic-All activities are on voluntary basis</li>
+                <li>Creativity and innovation</li>
+                <li>Team-work and participation</li>
+                <li>Integrity</li>
+                <li>Responsibility</li>
+              </ul>
             </div>
             <div>
               <Image
