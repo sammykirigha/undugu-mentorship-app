@@ -6,18 +6,18 @@ import Link from "next/link";
 import { BsSearch } from "react-icons/bs";
 import { MdMenu } from "react-icons/md";
 
-import logo from "./../../../public/logo-two.jpg";
+import logo from "./../../public/logo-two.jpg";
 
 const NavBar = () => {
   const [showSearch, setShowSearch] = useState(false);
   const [showNavItems, setShowNavItems] = useState(false);
   const [showNavItemsSmallDevice, setShowNavItemsSmallDevice] = useState(false);
 
-  const [navBg, setNavBg] = useState("bg-transparent");
+  const [navBg, setNavBg] = useState("#040464");
 
   useEffect(() => {
     const handleWithScrollForSearchBar = () => {
-      if (window.innerWidth > 920) {
+      if (window.innerWidth > 880) {
         setShowSearch(true);
         setShowNavItemsSmallDevice(false)
       } else {
@@ -36,9 +36,7 @@ const NavBar = () => {
 
   useEffect(() => {
     const handleWithScroll = () => {
-      console.log("<<<>>>>", window.innerWidth);
-
-      if (window.innerWidth > 700) {
+      if (window.innerWidth > 760) {
         setShowNavItems(true);
       } else {
         setShowNavItems(false);
@@ -57,9 +55,9 @@ const NavBar = () => {
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 80) {
-        setNavBg("#151538");
+        setNavBg("#040464");
       } else {
-        setNavBg("bg-transparent");
+        setNavBg("#040464");
       }
     };
 
@@ -73,7 +71,7 @@ const NavBar = () => {
   }, []);
 
   return (
-    <div className={`fixed top-0 z-40 w-full  text-white bg-[${navBg}] `}>
+    <div className={`fixed top-0 z-[2000] w-full  text-white bg-[${navBg}] `}>
       <div className="flex relative max-w-[1440px] mx-auto w-full  h-[77px] ">
         <div className="flex items-center justify-between w-full px-3">
           <Image

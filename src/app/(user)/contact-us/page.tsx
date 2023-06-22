@@ -1,15 +1,16 @@
+import ContactUs from "@/src/components/ContactUs";
 import React from "react";
 
 interface Props {}
 
-function ContactUs(props: Props) {
+function Page(props: Props) {
   const {} = props;
 
   return (
-    <div className="flex flex-col mt-[125px] max-w-[1400px] mx-auto bg-blue h-auto">
-      Hello from Contact us
+    <div className="flex flex-col">
+      <ContactUs />
     </div>
   );
 }
 
-export default ContactUs;
+export default Page;

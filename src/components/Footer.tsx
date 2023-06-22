@@ -20,7 +20,7 @@ function Footer() {
               className="w-[250px] md:w-[300px] h-[45px] px-3 focus:outline-0"
               placeholder="example@email.com"
             />
-            <button className="bg-[#ff6100] hover:bg-[#f3a676] hover:transition-all hover:duration-700 h-[45px] w-fit px-4 py-2 text-white uppercase font-semibold">
+            <button className="hover:bg-[#151538] bg-[#1ea2a0] hover:transition-all hover:duration-700 h-[45px] w-fit px-4 py-2 text-white uppercase font-semibold">
               Subscribe
             </button>
           </div>

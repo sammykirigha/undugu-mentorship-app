@@ -15,6 +15,7 @@ module.exports = {
       },
       backgroundImage: (theme) => ({
         "hero-pattern": "url('../../public/image-2.jpg')",
+        "contact-bg-pattern": "url('../../public/image-2-crop.jpg')",
         "footer-texture": "url('/img/footer-texture.png')",
       }),
     },
