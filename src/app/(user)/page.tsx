@@ -6,7 +6,7 @@ import image from "../../../public/Our_MP.jpg";
 export default async function Home() {
   return (
     <div className="bg-white">
-      <div className="relative bg-hero-pattern bg-cover before:z-10 bg-center before:bg-[black]/70 before:h-[100%] before:absolute before:w-full">
+      <div className="relative bg-hero-pattern bg-cover before:z-10 bg-center before:bg-[black]/40 before:h-[100%] before:absolute before:w-full">
         <div className="min-h-[60vh] flex-col  flex pt-[130px] bg-slate-100_">
           <div className="container z-20 flex flex-col items-center justify-center flex-1 h-full p-2 sm:p-4 lg:p-0">
             <h1 className="text-[30px] capitalize leading-[70px] font-bold text-white lg:text-[60px]">
