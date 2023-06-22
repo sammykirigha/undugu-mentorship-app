@@ -13,7 +13,7 @@ const NavBar = () => {
   const [showNavItems, setShowNavItems] = useState(false);
   const [showNavItemsSmallDevice, setShowNavItemsSmallDevice] = useState(false);
 
-  const [navBg, setNavBg] = useState("#040464");
+  const [navBg, setNavBg] = useState("#2b2b5c");
 
   useEffect(() => {
     const handleWithScrollForSearchBar = () => {
@@ -57,7 +57,7 @@ const NavBar = () => {
       if (window.scrollY > 80) {
         setNavBg("#040464");
       } else {
-        setNavBg("#040464");
+        setNavBg("#2b2b5c");
       }
     };
 

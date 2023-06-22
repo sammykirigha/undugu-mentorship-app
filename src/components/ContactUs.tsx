@@ -30,13 +30,13 @@ const ContactUs = () => {
                   <p className="text-[16px] text-gray-500 leading-4">
                     Call us directly at:
                   </p>
-                  <p className="text-[18px] text-[#1ea2a0] mt-1 font-[700]">
+                  <p className="text-[18px] text-[#1ea2a0] mt-1 font-[600]">
                     +254 70399875673
                   </p>
                   <span className="text-sm text-text leading-2 pt-0 mt-0 text-center ml-10 mb-0">
                     Or
                   </span>
-                  <p className="text-[18px] text-[#1ea2a0] font-[700]">
+                  <p className="text-[18px] text-[#1ea2a0] font-[600]">
                     +254 70399875673
                   </p>
                 </div>
@@ -57,36 +57,52 @@ const ContactUs = () => {
             </div>
             <div className="flex-1 flex flex-col w-full items-center justify-center bg-white rounded-md">
               <div className="flex flex-col w-full items-start justify-start px-40">
-                <h2 className="text-center text-lg mx-auto">Send Us A Message</h2>
+                <h2 className="text-center text-[24px] py-1 font-[700px] capitalize text-[#1ea2a0] mx-auto">
+                  Send Us A Message
+                </h2>
                 <div className="flex flex-col">
-                  <p className="text-ccenter">
+                  <p className="text-start text-[16px] text-gray-500">
                     We would love to respond to your queries or just hear from
-                    you
+                    you.
                   </p>
-                  <p>Feel free to get in touch with us</p>
+                  <p className="text-start text-[16px] text-gray-500">
+                    Feel free to get in touch with us.
+                  </p>
                 </div>
-                <div className="flex flex-col gap-3 mt-[20px]  w-full">
+                <div className="flex flex-col gap-3 mt-[10px] w-full">
                   <div className="flex flex-col ">
-                    <label>Name</label>
+                    <label className="text-[#1ea2a0]">Name</label>
                     <input
                       type="text"
-                      className=" mt-1"
+                      className=" mt-1 rounded-md outline-none border border-[#1ea2a0] focus:outline-none focus:border-0 focus:ring-[#1ea2a0]"
                       placeholder="Enter your Name"
                     />
                   </div>
                   <div className="flex flex-col ">
-                    <label>Email</label>
-                    <input type="text" placeholder="Enter your Email" />
+                    <label className="text-[#1ea2a0]">Email</label>
+                    <input
+                      type="text"
+                      className=" mt-1 rounded-md outline-none border border-[#1ea2a0] focus:outline-none focus:border-0 focus:ring-[#1ea2a0]"
+                      placeholder="Enter your Email"
+                    />
                   </div>
                   <div className="flex flex-col ">
-                    <label>Subject</label>
-                    <input type="text" placeholder="Enter the subject" />
+                    <label className="text-[#1ea2a0]">Subject</label>
+                    <input
+                      type="text"
+                      className=" mt-1 rounded-md outline-none border border-[#1ea2a0] focus:outline-none focus:border-0 focus:ring-[#1ea2a0]"
+                      placeholder="Enter the subject"
+                    />
                   </div>
                   <div className="flex flex-col ">
-                    <label>Message</label>
-                    <textarea rows={3}></textarea>
+                    <label className="text-[#1ea2a0]">Message</label>
+                    <textarea
+                      className=" mt-1 rounded-md outline-none border border-[#1ea2a0] focus:outline-none focus:border-0 focus:ring-[#1ea2a0]"
+                      rows={3}
+                    ></textarea>
                   </div>
-                  <button className="mt-3 w-fit bg-[#1ea2a0] py-[8px] px-[36px] text-white rounded-md cursor-pointer">
+
+                  <button className="my-1 w-fit bg-[#1ea2a0] py-[8px] px-[36px] text-white rounded-md cursor-pointer">
                     Send
                   </button>
                 </div>
