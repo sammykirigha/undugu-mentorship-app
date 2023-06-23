@@ -9,7 +9,7 @@ const ContactUs = () => {
           <div className="!bg-black/10 w-full flex items-center justify-center">
             <div className="absolute top-0 inset-x-0  py-[40px] flex flex-col max-w-full  items-center justify-center ">
               <h1 className="text-center test-white font-[700] text-white text-[30px]">
-                Contact us about UnduguMentorships's Program
+                Contact Us About UnduguMentorships's Program
               </h1>
               <p className="text-[19px] font-[500px] text-white brightness-150 max-w-xs text-center">
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit.
@@ -22,7 +22,7 @@ const ContactUs = () => {
         <div className="flex flex-col bg-gray-50 w-full h-[calc(100vh_-_385px)] items-center justify-start">
           <div className="flex gap-6 w-[65vw] -mt-[50px] z-[999] h-full bg-gray-50 rounded-md p-[20px]">
             <div className="flex flex-col w-96 gap-5 ">
-              <div className=" bg-white min-w-64 flex gap-6 items-start px-[30px] py-5 cursor-pointer rounded-md  ">
+              <div className=" bg-white min-w-64 flex gap-6 items-start px-[30px] py-5 cursor-pointer rounded-md shadow-md  ">
                 <span className="h-12 w-12 flex items-center justify-center rounded-full border border-text">
                   <BsTelephone className="h-7 w-7 text-text" />
                 </span>
@@ -41,7 +41,7 @@ const ContactUs = () => {
                   </p>
                 </div>
               </div>
-              <div className=" bg-white min-w-64 flex gap-6 items-start px-[30px] py-8 cursor-pointer rounded-md  ">
+              <div className=" bg-white min-w-64 flex gap-6 items-start px-[30px] py-8 cursor-pointer rounded-md shadow-md  ">
                 <span className="h-12 w-12 flex items-center justify-center rounded-full border border-text">
                   <BsWechat className="h-7 w-7 text-text" />
                 </span>
@@ -55,7 +55,7 @@ const ContactUs = () => {
                 </div>
               </div>
             </div>
-            <div className="flex-1 flex flex-col w-full items-center justify-center bg-white rounded-md">
+            <div className="flex-1 flex flex-col w-full items-center justify-center bg-white rounded-md shadow-md">
               <div className="flex flex-col w-full items-start justify-start px-40">
                 <h2 className="text-center text-[24px] py-1 font-[700px] capitalize text-[#1ea2a0] mx-auto">
                   Send Us A Message
