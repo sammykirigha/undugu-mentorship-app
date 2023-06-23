@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import style from "./about.module.css";
 import Image from "next/image";
@@ -12,8 +14,8 @@ import coach6 from "../../../../public/img/coach7.webp";
 
 function About() {
   return (
-    <body className={style.aboutUsP}>
-      <section className="container flex justify-center my-24 w-98 py-1.5 ">
+    <body className={`${style.aboutUsP} max-w-[1400px] mx-auto`}>
+      <section className="container flex justify-center my-24 w-98 py-1.5">
         <div className={style.ourJourney}>
           <h1 className={style.journeyHeader}>
             About Undugu Mentorship Initiative

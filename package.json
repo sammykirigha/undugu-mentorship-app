@@ -39,6 +39,7 @@
   "devDependencies": {
     "@sanity/eslint-config-studio": "^2.0.1",
     "@tailwindcss/typography": "^0.5.9",
-    "@types/react-slick": "^0.23.10"
+    "@types/react-slick": "^0.23.10",
+    "tailwind-scrollbar": "^3.0.4"
   }
 }
