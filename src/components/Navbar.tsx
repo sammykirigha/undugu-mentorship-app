@@ -116,11 +116,11 @@ const NavBar = () => {
           {showSearch ? (
             <div className="flex items-center">
               <input
-                className="bg-white h-[40px] md:w-[350px] rounded-l-sm px-3 text-slate-900 text-[0.9rem] outline-none focus:ring-0"
+                className="bg-white h-[40px] md:w-[350px] rounded-l-md px-3 text-slate-900 text-[0.9rem] outline-none focus:ring-0"
                 placeholder="Search..."
               />
-              <span className="bg-darkBlue h-[40px] rounded-sm w-10 flex items-center justify-center cursor-pointer">
-                <BsSearch className=" text-[1.4rem]" />
+              <span className="bg-[#84fffd] h-[40px] rounded-r-md w-10 flex items-center justify-center cursor-pointer">
+                <BsSearch className=" text-[1.4rem] text-[#239492] " />
               </span>
             </div>
           ) : (

@@ -52,11 +52,35 @@ export const Testmonials = () => {
     setTouchPosition(null!);
   };
 
-  console.log("<<<>>>", currentIndex);
+
 
   useEffect(() => {
     setLength([1, 2, 3, 4, 5, 6, 7, 8].length);
   }, []);
+
+  useEffect(() => {
+    const checkWidthSize = () => {
+      if (typeof window !== "undefined") {
+        if (window.innerWidth > 866) {
+          setShow(3);
+        } else if (window.innerWidth > 600) {
+          setShow(2);
+        } else {
+          setShow(1);
+        }
+      }
+    };
+
+    checkWidthSize();
+
+    window.addEventListener("resize", checkWidthSize);
+    return () => {
+      window.removeEventListener("resize", checkWidthSize);
+    };
+  }, []);
+
+  console.log("<<<>>>", show);
+
 
   return (
     <div className=" bg-white w-full shadow-md">
@@ -72,7 +96,7 @@ export const Testmonials = () => {
           <CarouselComponent
             handleTouchMove={() => handleTouchMove}
             handleTouchStart={() => handleTouchStart}
-            show={3}
+            show={show}
             currentIndex={currentIndex}
             setCurrentIndex={setCurrentIndex}
           >

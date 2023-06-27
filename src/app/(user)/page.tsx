@@ -22,13 +22,13 @@ export default async function Home() {
             <div className="flex gap-3 mb-8 ">
               <Link
                 href="about"
-                className="px-8 py-3 text-lg transition bg-white rounded hover:bg-darkBlue hover:text-white"
+                className="px-8 py-3 text-lg rounded bg-[#1ea2a0] border border-[#1ea2a0] text-white hover:bg-white hover:text-[#1ea2a0] "
               >
                 About Us
               </Link>
               <Link
                 href="events"
-                className="bg-[#1ea2a0] px-8 text-white py-3 hover:bg-darkBlue rounded text-lg hover:text-white transition"
+                className=" px-8  py-3 bg-white border border-[#1ea2a0] hover:bg-[#1ea2a0] hover:text-white text-[#1ea2a0] rounded text-lg  transition"
               >
                 Our Events
               </Link>
@@ -68,7 +68,7 @@ export default async function Home() {
             <hr className="opacity-60" />
 
             <div className="flex gap-3">
-              <CheckCircleIcon className="w-10 h-10 text-darkBlue" />
+              <CheckCircleIcon className="w-10 h-10 text-[#1ea2a0] bg-white rounded-full" />
               <div className="flex-1">
                 <h5 className="text-xl sm:text-2xl">Our Mission</h5>
                 <p className="mt-2 text-sm sm:text-base">
@@ -81,7 +81,7 @@ export default async function Home() {
             </div>
 
             <div className="flex gap-3">
-              <CheckCircleIcon className="w-10 h-10 text-darkBlue" />
+              <CheckCircleIcon className="w-10 h-10 text-[#1ea2a0] bg-white rounded-full" />
               <div className="flex-1">
                 <h5 className="text-xl sm:text-2xl">Our Vission</h5>
                 <p className="mt-2 text-sm sm:text-base">
@@ -93,7 +93,7 @@ export default async function Home() {
             </div>
 
             <div className="flex gap-3">
-              <CheckCircleIcon className="w-10 h-10 text-darkBlue" />
+              <CheckCircleIcon className="w-10 h-10 text-[#1ea2a0] bg-white rounded-full" />
               <div className="flex-1">
                 <h5 className="text-xl sm:text-2xl">Our Motto</h5>
                 <p className="mt-2 text-sm sm:text-base">
@@ -118,7 +118,7 @@ export default async function Home() {
             consultation today to discover how we can help you on your journey.
           </p>
 
-          <Link href="/contact-us" className="flex items-center justify-center gap-4 bg-[#1ea2a0] hover:bg-darkBlue text-white w-[200px] text-lg py-3 rounded-md">
+          <Link href="/contact-us" className="flex items-center justify-center gap-4  border-[2px] border-[#1ea2a0] hover:bg-[#1ea2a0] hover:text-white text-[#1ea2a0] w-[200px] text-lg py-3 rounded-md">
             Contact Us
             <svg
               xmlns="http://www.w3.org/2000/svg"
