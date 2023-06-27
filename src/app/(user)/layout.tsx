@@ -1,8 +1,8 @@
+import NavBar from "@/src/components/Navbar";
 import "../../styles/globals.css";
 
-import NavBar from "@/src/components/NavBar/page";
-import Footer from "@/src/components/footer/page";
 import { Metadata } from "next";
+import Footer from "@/src/components/Footer";
 
 export const metadata: Metadata = {
   title: "Undugu Mentorship Initiative",
