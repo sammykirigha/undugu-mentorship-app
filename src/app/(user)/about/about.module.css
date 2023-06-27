@@ -1,144 +1,41 @@
-.aboutUsP {
+.aboutbanner {
+  margin-top: 136px;
+  width: 100%;
+  min-height: 90vh;
+  background-image: url("../../../../public/img/homewave.svg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.banner {
+  width: 100%;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
 }
 
-.ourJourney {
-  display: flex;
-  justify-content: center;
-  width: 80%;
+.bannerImg {
+  width: 50% !important;
 }
 
-.journeyHeader {
-  width: 50%;
-  font-weight: bolder;
-  font-size: 55px;
+.bannerHeader {
+  width: 50% !important;
 }
 
-.journeryP {
-  width: 50%;
+.homeimg {
+  width: 50% !important;
+  height: 25rem !important;
 }
 
-.imgStlyes {
-  position: relative !important;
-  width: 30% !important;
-  border-radius: 10px;
-}
-
-.divImg {
-  display: flex;
-  width: 80%;
-  gap: 40px;
-}
-
-.customerQoute {
-  width: 80%;
-  text-align: center;
-}
-
-.coaching {
-  width: 80%;
-  display: flex;
-  gap: 97px;
-}
-
-.coachingImg {
+.missionImg {
   width: 50%;
 }
 
-.coachingDes {
+#missionImg {
+  border-top-right-radius: 50%;
+  border-bottom-right-radius: 50%;
+}
+
+.storyImg {
   width: 50%;
-}
-
-.imgCoaching {
-  width: 100% !important;
-  position: relative !important;
-  border-radius: 10px;
-}
-
-.approach {
-  display: flex;
-  width: 80%;
-  gap: 40px;
-}
-
-.life {
-  width: 50%;
-  gap: 32px;
-  display: flex;
-  flex-direction: column;
-}
-
-.lifeApproach {
-  width: 50%;
-}
-
-.approachHeader {
-  font-weight: bold;
-  font-size: 30px;
-}
-
-.teams {
-  width: 80%;
-}
-
-.teamdes {
-  padding-top: 20px;
-}
-
-/* responsiveness */
-@media (max-width: 640px) {
-  .ourJourney {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-
-  .journeyHeader {
-    width: 100%;
-  }
-
-  .journeryP {
-    width: 100%;
-  }
-
-  .divImg {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-
-  .imgStlyes {
-    width: 100% !important;
-  }
-
-  .coaching {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .coachingDes {
-    width: 100%;
-  }
-
-  .approach {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .life {
-    width: 100%;
-  }
-
-  .lifeApproach {
-    width: 100%;
-  }
-}
-
-@media (max-width: 1280px) {
-  .ourJourney {
-    display: flex;
-    gap: 58px;
-  }
 }

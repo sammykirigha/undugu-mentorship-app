@@ -67,7 +67,7 @@ function Page(props: Props) {
             </div>
             <div className="absolute hidden  group-hover:block inset-x-0 ease-in-out duration-700 bg-blue bottom-0 h-[2px]"></div>
           </div>
-          
+
           <div className="flex flex-col  gap-3 rounded-md relative group pb-3 cursor-pointer shadow-sm">
             <Image
               src={image2}
@@ -146,7 +146,6 @@ function Page(props: Props) {
             </div>
             <div className="absolute hidden  group-hover:block inset-x-0 ease-in-out duration-700 bg-blue bottom-0 h-[2px]"></div>
           </div>
-          
         </div>
       </div>
 
