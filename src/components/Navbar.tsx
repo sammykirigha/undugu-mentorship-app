@@ -13,7 +13,7 @@ const NavBar = () => {
   const [showNavItems, setShowNavItems] = useState(false);
   const [showNavItemsSmallDevice, setShowNavItemsSmallDevice] = useState(false);
 
-  const [navBg, setNavBg] = useState("#2b2b5c");
+  const [navBg, setNavBg] = useState("#1ea2a0");
 
   useEffect(() => {
     const handleWithScrollForSearchBar = () => {
@@ -55,9 +55,9 @@ const NavBar = () => {
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 80) {
-        setNavBg("#040464");
+        setNavBg("#1ea2a0");
       } else {
-        setNavBg("#2b2b5c");
+        setNavBg("#1ea2a0");
       }
     };
 
@@ -116,10 +116,10 @@ const NavBar = () => {
           {showSearch ? (
             <div className="flex items-center">
               <input
-                className="bg-white h-[40px] md:w-[350px] rounded-l-sm px-3 text-slate-900 text-[0.9rem]"
+                className="bg-white h-[40px] md:w-[350px] rounded-l-sm px-3 text-slate-900 text-[0.9rem] outline-none focus:ring-0"
                 placeholder="Search..."
               />
-              <span className="bg-[#1ea2a0] h-[40px]  rounded-r-sm w-10 flex items-center justify-center cursor-pointer">
+              <span className="bg-darkBlue h-[40px] rounded-sm w-10 flex items-center justify-center cursor-pointer">
                 <BsSearch className=" text-[1.4rem]" />
               </span>
             </div>

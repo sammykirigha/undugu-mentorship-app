@@ -38,7 +38,7 @@ export default async function Home() {
       </div>
 
       <div className="flex flex-col-reverse lg:flex-row min-h-[800px]">
-        <div className="lg:flex-1 relative bg-cover h-[250px] lg:h-auto  bg-no-repeat bg-['center left'] bg-hero-pattern">
+        <div className="lg:flex-1 relative bg-cover h-[250px] lg:h-auto  bg-no-repeat bg-['center left'] bg-hero-pattern lg:bg-hero-pattern">
           <div className="">
             <div className="absolute inset-0 bottom-bg-overlay"></div>
             <div className="absolute inset-x-0 flex justify-center bottom-5">
@@ -52,7 +52,7 @@ export default async function Home() {
           </div>
         </div>
 
-        <div className="flex justify-center flex-1 py-6 bg-[#040464]">
+        <div className="flex justify-center flex-1 py-6 bg-[#1ea2a0]">
           <div className="flex flex-col max-w-[800px] justify-center gap-6 p-2 text-white  md:gap-8 md:p-4 lg:p-16">
             <h4 className="text-3xl md:text-4xl font-bold leading-[40px]">
               What Is Our Motivation
@@ -68,7 +68,7 @@ export default async function Home() {
             <hr className="opacity-60" />
 
             <div className="flex gap-3">
-              <CheckCircleIcon className="w-10 h-10 text-[#1ea2a0]" />
+              <CheckCircleIcon className="w-10 h-10 text-darkBlue" />
               <div className="flex-1">
                 <h5 className="text-xl sm:text-2xl">Our Mission</h5>
                 <p className="mt-2 text-sm sm:text-base">
@@ -81,7 +81,7 @@ export default async function Home() {
             </div>
 
             <div className="flex gap-3">
-              <CheckCircleIcon className="w-10 h-10 text-[#1ea2a0]" />
+              <CheckCircleIcon className="w-10 h-10 text-darkBlue" />
               <div className="flex-1">
                 <h5 className="text-xl sm:text-2xl">Our Vission</h5>
                 <p className="mt-2 text-sm sm:text-base">
@@ -93,7 +93,7 @@ export default async function Home() {
             </div>
 
             <div className="flex gap-3">
-              <CheckCircleIcon className="w-10 h-10 text-[#1ea2a0]" />
+              <CheckCircleIcon className="w-10 h-10 text-darkBlue" />
               <div className="flex-1">
                 <h5 className="text-xl sm:text-2xl">Our Motto</h5>
                 <p className="mt-2 text-sm sm:text-base">
@@ -118,7 +118,7 @@ export default async function Home() {
             consultation today to discover how we can help you on your journey.
           </p>
 
-          <button className="flex items-center justify-center gap-4 bg-[#1ea2a0] text-white w-[200px] text-lg py-3 rounded-md">
+          <Link href="/contact-us" className="flex items-center justify-center gap-4 bg-[#1ea2a0] hover:bg-darkBlue text-white w-[200px] text-lg py-3 rounded-md">
             Contact Us
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -134,7 +134,7 @@ export default async function Home() {
                 d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"
               />
             </svg>
-          </button>
+          </Link>
         </div>
       </div>
 
