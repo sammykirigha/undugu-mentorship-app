@@ -4,7 +4,7 @@ import React from "react";
 
 export const Testmony = () => {
   return (
-    <div className="relative w-full lg:w-96 flex flex-col items-center justify-center">
+    <div className="relative w-full bg-white lg:w-96 flex flex-col items-center justify-center">
       <Image
         src={image}
         alt=""

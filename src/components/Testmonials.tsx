@@ -1,10 +1,65 @@
+"use client";
 
-import React from "react";
+import "./carousel/Carousel.css";
+import React, { useEffect, useState } from "react";
 import { Testmony } from "./Testmony";
+import { CarouselComponent } from "./carousel/Carousel";
+import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
 export const Testmonials = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [length, setLength] = useState([1, 2, 3, 4, 5, 6, 7, 8].length);
+  const [show, setShow] = useState(3);
+  const [touchPosition, setTouchPosition] = useState<
+    React.TouchEvent<HTMLDivElement>
+  >(null!);
+
+  const prev = () => {
+    if (currentIndex > 0) {
+      setCurrentIndex((prevState: number) => prevState - 1);
+    }
+  };
+
+  const next = () => {
+    if (currentIndex < length - show) {
+      setCurrentIndex((prevState) => prevState + 1);
+    }
+  };
+
+  const handleTouchStart = (e: React.TouchEvent<HTMLDivElement>) => {
+    const touchDown: any = e.touches[0].clientX;
+    setTouchPosition(touchDown);
+  };
+
+  const handleTouchMove = (e: React.TouchEvent<HTMLDivElement>) => {
+    const touchDown: any = touchPosition;
+
+    if (touchDown === null) {
+      return;
+    }
+
+    const currentTouch = e.touches[0].clientX;
+    const diff = touchDown - currentTouch;
+
+    if (diff > 5) {
+      next();
+    }
+
+    if (diff < -5) {
+      prev();
+    }
+
+    setTouchPosition(null!);
+  };
+
+  console.log("<<<>>>", currentIndex);
+
+  useEffect(() => {
+    setLength([1, 2, 3, 4, 5, 6, 7, 8].length);
+  }, []);
+
   return (
-    <div className=" bg-white w-full">
+    <div className=" bg-white w-full shadow-md">
       <div className="flex flex-col bg-white items-center justify-center mt-8 px-10 w-full max-w-[1440px] mx-auto">
         <h1 className="text-[1.6rem] font-[700] text-slate-600 text-center">
           Over 100 students have benefited from this program
@@ -12,54 +67,44 @@ export const Testmonials = () => {
         <p className="text-[1.2rem] text-slate-500 leading-[1rem] mt-2 text-center ">
           Here are some of their success stories
         </p>
-        <div className="mt-10 w-full">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-center place-items-center  w-full">
-            {[1,2,3].map((item) => {
-                return (
-                    <Testmony />
-                )
+        <div className="py-10 w-full h-full ">
+          {/* <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-center place-items-center  w-full"> */}
+          <CarouselComponent
+            handleTouchMove={() => handleTouchMove}
+            handleTouchStart={() => handleTouchStart}
+            show={3}
+            currentIndex={currentIndex}
+            setCurrentIndex={setCurrentIndex}
+          >
+            {[1, 2, 3, 4, 5, 6, 7, 8].map((item) => {
+              return <Testmony />;
             })}
-          </div>
+          </CarouselComponent>
+          {/* </div> */}
         </div>
       </div>
 
-      <div className="mt-10 bg-white flex flex-col items-center justify-center w-full max-w-[1440px] mx-auto">
+      <div className="mt-3 flex flex-col items-center justify-center w-full max-w-[1440px] mx-auto">
         <div className="flex gap-5">
-          <span>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth={1.5}
-              stroke="currentColor"
-              className="w-10 h-10 text-primary cursor-pointer"
+          {currentIndex > 0 && (
+            <button
+              onClick={prev}
+              className="left-arrow flex items-center justify-center !bg-[#1ea2a0] cursor-pointer"
             >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M11.25 9l-3 3m0 0l3 3m-3-3h7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-              />
-            </svg>
-          </span>
-          <span>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth={1.5}
-              stroke="currentColor"
-              className="w-10 h-10 text-primary cursor-pointer"
+              <FaArrowLeft className="text-white" />
+            </button>
+          )}
+          {currentIndex < length - show && (
+            <button
+              onClick={next}
+              className="right-arrow flex items-center justify-center !bg-[#1ea2a0] cursor-pointer"
             >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M12.75 15l3-3m0 0l-3-3m3 3h-7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-              />
-            </svg>
-          </span>
+              <FaArrowRight className="text-white" />
+            </button>
+          )}
         </div>
-        <div className="my-10 bg-gray-100 transform hover:-translate-y-0.5 transition duration-300">
-          <button className=" py-2 px-7 w-fit rounded-md shadow-md  ">
+        <div className="my-5 bg-gray-100 ">
+          <button className=" button-2 py-2 text-white px-7 w-fit text-[14px] rounded-sm ">
             Read More Testimonials
           </button>
         </div>
