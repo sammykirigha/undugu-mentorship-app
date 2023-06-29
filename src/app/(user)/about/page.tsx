@@ -18,13 +18,25 @@ function About() {
       {/* banner content */}
       <section className={style.aboutbanner}>
         <div className="w-full flex items-center">
-          <div className="w-6/12">
-            <h1>
+          <div className="w-6/12" id={style.bannerContent}>
+            <h1 className="font-black text-center text-blue-600 text-3xl">
               Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius,
               sapiente.
             </h1>
           </div>
-          <div className="w-6/12">
+          <div className="w-6/12" id={style.bannerImg}>
+            {/* <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <mask id="img_path">
+                  <path
+                    fill="#FF0066"
+                    d="M39,-38.9C55,-33,75.6,-25,80.9,-11.8C86.2,1.5,76.3,19.9,63.8,32.3C51.3,44.7,36.1,51.1,21.3,54.9C6.5,58.8,-7.9,60,-23.1,57.2C-38.2,54.4,-54.2,47.4,-61.2,35.3C-68.2,23.2,-66.4,5.9,-62.8,-10.5C-59.3,-27,-54,-42.5,-43.3,-49.3C-32.5,-56,-16.3,-53.9,-2.4,-51.1C11.5,-48.3,23,-44.7,39,-38.9Z"
+                    transform="translate(100 100)"
+                  />
+                </mask>
+              </defs> */}
+
+            {/* </svg> */}
             <Image
               className="w-full h-96"
               src={audi}
@@ -32,6 +44,7 @@ function About() {
               quality={100}
               placeholder="blur"
               style={{
+                // mask: "url(#img_path)",
                 objectFit: "cover",
               }}
             />
@@ -41,10 +54,12 @@ function About() {
 
       {/* our mission */}
 
-      <section className="container flex justify-center">
-        <div className="w-5/6 flex gap-10">
-          <div className="flex flex-col w-1/2">
-            <h3>Our mission</h3>
+      <section className="container flex justify-center" id={style.mission}>
+        <div className="w-5/6 flex gap-10" id={style.missionDiv}>
+          <div className="flex flex-col w-1/2" id={style.missionContent}>
+            <h3 className="font-black text-center text-blue-600 text-3xl pt-6">
+              Our mission
+            </h3>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius non
               maiores ratione! Dolorem dicta repudiandae repellendus et adipisci
@@ -79,7 +94,7 @@ function About() {
 
       {/* Our story */}
       <section className="container flex justify-center mt-24">
-        <div className="w-5/6 flex gap-10">
+        <div className="w-5/6 flex gap-10" id={style.story}>
           <div className={style.storyImg}>
             <Image
               className="w-full h-96"
@@ -93,7 +108,10 @@ function About() {
               }}
             />
           </div>
-          <div className="w-1/2">
+          <div className="w-1/2" id={style.storyContent}>
+            <h3 className="font-black text-center text-blue-600 text-3xl pt-6">
+              Our Story
+            </h3>
             <p>
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. At, ab
               deleniti deserunt quam unde nesciunt consequuntur sequi voluptate
