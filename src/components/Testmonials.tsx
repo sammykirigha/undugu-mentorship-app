@@ -5,6 +5,7 @@ import React, { useEffect, useState } from "react";
 import { Testmony } from "./Testmony";
 import { CarouselComponent } from "./carousel/Carousel";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
+import Link from "next/link";
 
 export const Testmonials = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -128,9 +129,9 @@ export const Testmonials = () => {
           )}
         </div>
         <div className="my-5 bg-gray-100 ">
-          <button className=" button-2 py-2 text-white px-7 w-fit text-[14px] rounded-sm ">
+          <Link href="/testmonials" className=" button-2 py-2 text-white px-7 w-fit text-[14px] rounded-sm ">
             Read More Testimonials
-          </button>
+          </Link>
         </div>
       </div>
     </div>
