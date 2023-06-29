@@ -17,7 +17,7 @@ function Page(props: Props) {
   const {} = props;
 
   return (
-    <div className="mt-[125px] flex gap-10 w-full max-w-[1280px] mx-auto pt-5 pb-12  ">
+    <div className="mt-[50px] md:mt-[80px] xl:mt-[125px] flex flex-col xl:flex-row gap-10 w-full max-w-[1280px] mx-auto pt-5 pb-12 px-[20px] xl:px-0  ">
       {/* left */}
       <div className="mt-4">
         <h1
@@ -28,8 +28,8 @@ function Page(props: Props) {
         >
           UpComing Events
         </h1>
-        <div className="bg-white w-full flex flex-col gap-6 py-5 ">
-          <div className="flex flex-col  gap-3 rounded-md relative group pb-3 cursor-pointer shadow-sm  w-full">
+        <div className="bg-white w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:flex xl:flex-col  gap-6 py-5 ">
+          <div className="flex flex-col  gap-3 rounded-md relative group pb-3 cursor-pointer shadow-sm ">
             <Image
               src={image8}
               alt=""
@@ -67,7 +67,6 @@ function Page(props: Props) {
             </div>
             <div className="absolute hidden  group-hover:block inset-x-0 ease-in-out duration-700 bg-blue bottom-0 h-[2px]"></div>
           </div>
-
           <div className="flex flex-col  gap-3 rounded-md relative group pb-3 cursor-pointer shadow-sm">
             <Image
               src={image2}
@@ -164,7 +163,7 @@ function Page(props: Props) {
               alt=""
               height={350}
               width={600}
-              className="object-cover "
+              className="object-cover sm:w-full xl:w-[600px] "
               sizes="100vw"
             />
             <div className="flex flex-col absolute bottom-0 left-0 right-0 p-4 text-left transition-all ease-in-out duration-200 bg-gradient-to-t from-primary">
@@ -180,7 +179,7 @@ function Page(props: Props) {
               alt=""
               height={350}
               width={600}
-              className="object-cover "
+              className="object-cover sm:w-full xl:w-[600px] "
             />
             <div className="flex flex-col absolute bottom-0 left-0 right-0 p-4 text-left transition-all ease-in-out duration-200 bg-gradient-to-t from-primary">
               <p className="text-white text-[1rem] leading-[1.1rem] font-[700]">
@@ -192,7 +191,7 @@ function Page(props: Props) {
       </div>
 
       {/* right */}
-      <div className="flex flex-col mt-4">
+      <div className="flex flex-col mt-4  ">
         <h1
           className="text-primary whitespace-nowrap text-[1.3rem] font-[700] opacity-90 flex 
               items-center gap-3 before:content-[''] before:h-1 before:w-full 
@@ -204,14 +203,14 @@ function Page(props: Props) {
         <p className="text-[1.0rem] text-primary leading-[1.2rem] tracking-wide my-3 font-semibold">
           See Our Past Mentoring Events In Different Schools
         </p>
-        <div className="bg-white w-full flex flex-col gap-6 py-5 ">
-          <div className="flex  gap-3 relative group pb-3 cursor-pointer shadow-sm">
+        <div className=" w-full grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2  xl:flex xl:flex-col gap-6 py-5 ">
+          <div className="flex items-center  gap-3 relative group pb-3 cursor-pointer shadow-sm">
             <Image
               src={image3}
               alt=""
               height={150}
               width={200}
-              className="rounded-sm"
+              className="rounded-sm w-[170px] h-[100px] sm:w-[200px] sm:h-[100px]  object-cover"
             />
             <div className="mt-3 flex flex-col items-start justify-between  gap-3 w-52">
               <p className="text-primary text-[0.8rem] leading-[0.9rem] tracking-normal font-[500]">
@@ -241,13 +240,13 @@ function Page(props: Props) {
             </div>
             <div className="absolute hidden  group-hover:block inset-x-0 ease-in-out duration-700 bg-blue bottom-0 h-[2px]"></div>
           </div>
-          <div className="flex  gap-3 relative group pb-3 cursor-pointer shadow-sm">
+          <div className="flex items-center  gap-3 relative group pb-3 cursor-pointer shadow-sm">
             <Image
               src={image2}
               alt=""
               height={150}
               width={200}
-              className="rounded-sm"
+              className="rounded-sm w-[170px] h-[100px] sm:w-[200px] sm:h-[100px] object-cover"
             />
             <div className="mt-3 flex flex-col items-start justify-between  gap-3 w-52">
               <p className="text-primary text-[0.8rem] leading-[0.9rem] tracking-normal font-[500]">
@@ -277,13 +276,13 @@ function Page(props: Props) {
             </div>
             <div className="absolute hidden  group-hover:block inset-x-0 ease-in-out duration-700 bg-blue bottom-0 h-[2px]"></div>
           </div>
-          <div className="flex  gap-3 relative group pb-3 cursor-pointer shadow-sm">
+          <div className="flex items-center  gap-3 relative group pb-3 cursor-pointer shadow-sm">
             <Image
               src={image}
               alt=""
               height={150}
               width={200}
-              className="rounded-sm"
+              className="rounded-sm w-[170px] h-[100px] sm:w-[200px] sm:h-[100px] object-cover"
             />
             <div className="mt-3 flex flex-col items-start justify-between  gap-3 w-52">
               <p className="text-primary text-[0.8rem] leading-[0.9rem] tracking-normal font-[500]">
@@ -313,15 +312,51 @@ function Page(props: Props) {
             </div>
             <div className="absolute hidden  group-hover:block inset-x-0 ease-in-out duration-700 bg-blue bottom-0 h-[2px]"></div>
           </div>
-          <div className="flex  gap-3 relative group pb-3 cursor-pointer shadow-sm">
+          <div className="flex items-center gap-3 relative group cursor-pointer shadow-sm ">
             <Image
               src={image4}
               alt=""
               height={150}
               width={200}
-              className="rounded-sm"
+              className="rounded-sm w-[170px] h-[100px] sm:w-[200px] sm:h-[100px] object-cover"
             />
-            <div className="mt-3 flex flex-col items-start justify-between  gap-3 w-52">
+            <div className="mt-3 flex flex-col  items-start justify-end gap-3 w-52">
+              <p className="text-primary text-[0.8rem] leading-[0.9rem] tracking-normal font-[500]">
+                A Mentoring session with students from Mwangeka Girls Wundanyi.
+              </p>
+              <div className=" flex flex-row gap-4 ">
+                <Link
+                  legacyBehavior
+                  href={"https://www.facebook.com/UnduguMentorship"}
+                  title="Undugu Mentorship Initiative on Facebook"
+                >
+                  <SiFacebook className="w-5 h-5 text-primary cursor-pointer hover:text-[#ff6100] hover:transition-all text-center  " />
+                </Link>
+                <Link
+                  href={"/"}
+                  title="Undugu Mentorship Initiative on Twitter"
+                >
+                  <BsTwitter className="w-5 h-5 text-primary cursor-pointer hover:text-[#ff6100] hover:transition-all text-center  " />
+                </Link>
+                <Link
+                  href={"/"}
+                  title="Undugu Mentorship Initiative on Instagram"
+                >
+                  <BsInstagram className="w-5 h-5 text-primary cursor-pointer hover:text-[#ff6100] hover:transition-all text-center  " />
+                </Link>
+              </div>
+            </div>
+            <div className="absolute hidden  group-hover:block inset-x-0 ease-in-out duration-700 bg-blue bottom-0 h-[2px]"></div>
+          </div>
+          <div className="flex items-center gap-3 relative group cursor-pointer shadow-sm ">
+            <Image
+              src={image4}
+              alt=""
+              height={150}
+              width={200}
+              className="rounded-sm w-[170px] h-[100px] sm:w-[200px] sm:h-[100px] object-cover"
+            />
+            <div className="mt-3 flex flex-col  items-start justify-end gap-3 w-52">
               <p className="text-primary text-[0.8rem] leading-[0.9rem] tracking-normal font-[500]">
                 A Mentoring session with students from Mwangeka Girls Wundanyi.
               </p>
