@@ -1,16 +1,13 @@
 "use client";
 
 import React from "react";
+import Link from "next/link";
 import style from "./about.module.css";
 import Image from "next/image";
 import audi from "../../../../public/img/blackAudi.jpg";
-import about from "../../../../public/img/aboutImg2.webp";
-import coach1 from "../../../../public/img/coach1.webp";
-import coach2 from "../../../../public/img/coach3.webp";
-import coach3 from "../../../../public/img/coach4.webp";
-import coach4 from "../../../../public/img/coach5.webp";
-import coach5 from "../../../../public/img/coach6.webp";
-import coach6 from "../../../../public/img/coach7.webp";
+import banner from "../../../../public/img/bannerImg.webp";
+import mission from "../../../../public/img/mission.webp";
+import story from "../../../../public/img/story.webp";
 
 function About() {
   return (
@@ -20,8 +17,7 @@ function About() {
         <div className="w-full flex items-center">
           <div className="w-6/12" id={style.bannerContent}>
             <h1 className="font-black text-center text-blue-600 text-3xl">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius,
-              sapiente.
+              Undugu Mentorship Initiative
             </h1>
           </div>
           <div className="w-6/12" id={style.bannerImg}>
@@ -39,13 +35,14 @@ function About() {
             {/* </svg> */}
             <Image
               className="w-full h-96"
-              src={audi}
+              src={banner}
               alt="Our story pic"
               quality={100}
               placeholder="blur"
               style={{
                 // mask: "url(#img_path)",
                 objectFit: "cover",
+                borderRadius: "10px",
               }}
             />
           </div>
@@ -57,30 +54,28 @@ function About() {
       <section className="container flex justify-center" id={style.mission}>
         <div className="w-5/6 flex gap-10" id={style.missionDiv}>
           <div className="flex flex-col w-1/2" id={style.missionContent}>
-            <h3 className="font-black text-center text-blue-600 text-3xl pt-6">
+            <h3 className="font-black text-center text-blue-600 text-3xl pt-6 pb-5">
               Our mission
             </h3>
+            <p className="pb-5">
+              The organization envisages every responsible adult taking
+              responsibility to offer support, guidance and motivation to the
+              younger generation. We have a pool of mentors working with various
+              schools in the entire Coastal region. Our mentorship curruculum is
+              professionally structured to achieve intended results.
+            </p>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius non
-              maiores ratione! Dolorem dicta repudiandae repellendus et adipisci
-              enim eligendi, architecto quis iusto nulla eum reiciendis aliquid
-              iure fugit odit, pariatur laborum reprehenderit a quibusdam. Unde
-              impedit voluptates suscipit nesciunt similique facere pariatur
-              itaque, voluptatem aperiam quae, numquam quas aspernatur
-              consequatur et nemo harum laudantium distinctio. Quisquam tempora
-              incidunt et quidem. Praesentium unde fuga doloremque numquam
-              laudantium. Pariatur, quam eos. Dolorem, corporis. Ratione, sed
-              doloremque nostrum fuga at facilis harum voluptates? Aut quas
-              soluta suscipit? Saepe eligendi voluptatum repudiandae expedita
-              alias error vel? Voluptas, iure necessitatibus! Perspiciatis rem
-              soluta distinctio.
+              The mentees gain by boosting their self-esteem, confidence and
+              desire to excel as well as valuable lessons on life skills,
+              career, positive attitude, avoidance of social evils such as drug
+              abuse, immorality and risky behaviors.
             </p>
           </div>
           <div className={style.missionImg}>
             <Image
               className="w-full h-96"
               id={style.missionImg}
-              src={audi}
+              src={mission}
               alt="Our story pic"
               quality={100}
               placeholder="blur"
@@ -99,17 +94,18 @@ function About() {
             <Image
               className="w-full h-96"
               id={style.storyImg}
-              src={audi}
+              src={story}
               alt="Our story pic"
               quality={100}
               placeholder="blur"
               style={{
                 objectFit: "cover",
+                borderRadius: "10px",
               }}
             />
           </div>
           <div className="w-1/2" id={style.storyContent}>
-            <h3 className="font-black text-center text-blue-600 text-3xl pt-6">
+            <h3 className="font-black text-center text-blue-600 text-3xl pt-6 pb-5">
               Our Story
             </h3>
             <p>
@@ -132,137 +128,7 @@ function About() {
 
       {/* Our History */}
 
-      <section className="container flex justify-center mt-24 mb-24">
-        <div
-          id="controls-carousel"
-          className="relative w-full flex justify-center"
-          data-carousel="static"
-        >
-          {/* Carousel wrapper  */}
-          <div className="relative h-56 overflow-hidden rounded-lg md:h-96 w-5/6 ">
-            {/* Item 1  */}
-            <div
-              className="active duration-700 ease-in-out w-full flex justify-center"
-              data-carousel-item
-            >
-              <Image
-                className="w-2/4 h-96"
-                src={audi}
-                alt="Our story pic"
-                quality={100}
-                placeholder="blur"
-                style={{
-                  objectFit: "cover",
-                }}
-              />
-            </div>
-            {/*  Item 2 */}
-            <div
-              className="hidden duration-700 ease-in-out"
-              data-carousel-item="active"
-            >
-              <Image
-                className="w-2/4 h-96"
-                src={audi}
-                alt="Our story pic"
-                quality={100}
-                placeholder="blur"
-                style={{
-                  objectFit: "cover",
-                }}
-              />
-            </div>
-            {/* Item 3 */}
-            <div className="hidden duration-700 ease-in-out" data-carousel-item>
-              <Image
-                className="w-2/4 h-96"
-                src={audi}
-                alt="Our story pic"
-                quality={100}
-                placeholder="blur"
-                style={{
-                  objectFit: "cover",
-                }}
-              />
-            </div>
-            {/* Item 4  */}
-            <div className="hidden duration-700 ease-in-out" data-carousel-item>
-              <Image
-                className="w-2/4 h-96"
-                src={audi}
-                alt="Our story pic"
-                quality={100}
-                placeholder="blur"
-                style={{
-                  objectFit: "cover",
-                }}
-              />
-            </div>
-            {/* Item 5  */}
-            <div className="hidden duration-700 ease-in-out" data-carousel-item>
-              <Image
-                className="w-2/4 h-96"
-                src={audi}
-                alt="Our story pic"
-                quality={100}
-                placeholder="blur"
-                style={{
-                  objectFit: "cover",
-                }}
-              />
-            </div>
-          </div>
-          {/* Slider controls  */}
-          <button
-            type="button"
-            className="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
-            data-carousel-prev
-          >
-            <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-              <svg
-                aria-hidden="true"
-                className="w-6 h-6 text-white dark:text-gray-800"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M15 19l-7-7 7-7"
-                ></path>
-              </svg>
-              <span className="sr-only">Previous</span>
-            </span>
-          </button>
-          <button
-            type="button"
-            className="absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
-            data-carousel-next
-          >
-            <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-              <svg
-                aria-hidden="true"
-                className="w-6 h-6 text-white dark:text-gray-800"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M9 5l7 7-7 7"
-                ></path>
-              </svg>
-              <span className="sr-only">Next</span>
-            </span>
-          </button>
-        </div>
-      </section>
+      <section className="container flex justify-center mt-24 mb-24"></section>
     </section>
   );
 }
