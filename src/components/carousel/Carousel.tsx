@@ -1,7 +1,7 @@
 "use client";
 
+import React, { Dispatch, SetStateAction } from "react";
 import "./Carousel.css";
-import React, { Dispatch, SetStateAction, useEffect, useState } from "react";
 
 type Props = {
   children: React.ReactNode[];
@@ -21,7 +21,7 @@ export const CarouselComponent = ({
 }: Props) => {
 
   return (
-    <div className="carousel-container  max-w-[1440px]  mx-auto w-full bg-gray-50 py-3 ">
+    <div className="carousel-container  max-w-[1440px]  mx-auto w-full bg-gray-50 py-3 px-1 ">
       <div className="carousel-wrapper">
         <div
           className="carousel-content-wrapper"

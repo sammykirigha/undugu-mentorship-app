@@ -85,7 +85,7 @@ export const Testmonials = () => {
 
   return (
     <div className=" bg-white w-full shadow-md">
-      <div className="flex flex-col bg-white items-center justify-center mt-8 px-10 w-full max-w-[1440px] mx-auto">
+      <div className="flex flex-col bg-white items-center justify-center mt-8 px-2 md:px-10 w-full max-w-[1440px] mx-auto">
         <h1 className="text-[1.6rem] font-[700] text-slate-600 text-center">
           Over 100 students have benefited from this program
         </h1>
@@ -101,7 +101,7 @@ export const Testmonials = () => {
             currentIndex={currentIndex}
             setCurrentIndex={setCurrentIndex}
           >
-            {[1, 2, 3, 4, 5, 6, 7, 8].map((item, index) => {
+            {[1, 2, 3, 4].map((item, index) => {
               return <Testimony key={index} />;
             })}
           </CarouselComponent>

@@ -1,15 +1,15 @@
 import Image from "next/image";
-import image from "../../public/Our_MP.jpg";
+import image from "../../public/profile.gif";
 
 export const Testimony = () => {
   return (
-    <div className="relative w-full bg-white lg:w-96 flex flex-col items-center justify-center">
+    <div className="relative w-full bg-white lg:w-96 hover:transition hover:duration-700 hover:ease-in-out flex flex-col items-center justify-center">
       <Image
         src={image}
         alt=""
         className="h-16 w-16 rounded-full absolute top-0 right-[40%]  "
       />
-      <div className="shadow-lg mt-5 border-t-2 border-t-slate-900 flex flex-col items-center justify-center px-3 py-5 ">
+      <div className="shadow-lg mt-5 border-t-2 border-t-[#239492] flex flex-col items-center justify-center px-3 py-5 ">
         <div className="mt-8">
           <h2 className="text-[1.1rem] text-primary font-[400]">
             Samuel Kirigha
@@ -21,7 +21,7 @@ export const Testimony = () => {
         overflow-auto scrollbar scrollbar-thumb-slate-300 scrollbar-w-1
         scrollbar-track-white scrollbar-thumb-rounded-lg  mt-5"
         >
-          <p className="text-[16px]">
+          <p className="text-[14px] px-1  leading-6">
             Lorem ipsum dolor sit amet consectetur adipisicing elit.Ducimus
             laborum quis fugit quasi vero ad placeat tempora repudiandae libero
             nam.Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus
