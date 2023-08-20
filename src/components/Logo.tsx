@@ -1,9 +1,9 @@
 import Image from "next/image";
-import logo from "./../public/logo-two.jpg"
+import logo from "./../../public/logo-two.jpg";
 
 
-function Logo(props: any){
-    const {renderDefault, titile} = props;
+function Logo(props: any) {
+    const { renderDefault } = props;
 
     return (
         <div className="!flex !items-center space-x-2">
