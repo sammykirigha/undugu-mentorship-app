@@ -1,4 +1,3 @@
-import React from "react";
 import { BsTelephone, BsWechat } from "react-icons/bs";
 
 const ContactUs = () => {
@@ -9,7 +8,7 @@ const ContactUs = () => {
           <div className="!bg-black/0 w-full flex items-center justify-center">
             <div className="absolute top-0 inset-x-0  py-[40px] flex flex-col max-w-full  items-center justify-center ">
               <h1 className="text-center test-white font-[700] text-white text-[30px]">
-                Contact Us About UnduguMentorships's Program
+                Contact Us About UnduguMentorship Program
               </h1>
               <p className="text-[19px] font-[500px] text-white brightness-150 w-full md:w-[500px] max-w-96 text-center">
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit.
@@ -51,7 +50,7 @@ const ContactUs = () => {
                   </p>
                   <button className="mt-3 bg-[#1ea2a0] py-[8px] px-[20px] text-white rounded-md cursor-pointer">
                     <a target="_blank" href="https://wa.me/254704093039?text=hi,there">
-                    Chat with us
+                      Chat with us
                     </a>
                   </button>
                 </div>

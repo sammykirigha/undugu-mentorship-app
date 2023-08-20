@@ -1,9 +1,15 @@
-import React from 'react'
+import { Testimony } from '@/src/components/Testmony'
 
- const Page = () => {
+const Page = () => {
   return (
-    <div className='mt-[100px]'>
-        <h1>This page is in progress</h1>
+    <div className='max-w-[1200px] mx-auto w-full mt-[100px]'>
+      <div className=' flex flex-wrap gap-4 py-10'>
+        {[1, 2, 3, 4, 5, 6, 7, 8, 8, 9, 10, 11, 12, 13, 14, 15].map((item, index) => {
+          return (
+            <Testimony key={index} />
+          )
+        })}
+      </div>
     </div>
   )
 }

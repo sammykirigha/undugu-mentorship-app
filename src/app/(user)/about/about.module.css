@@ -1,7 +1,4 @@
 .aboutbanner {
-  margin-top: 136px;
-  width: 100%;
-  min-height: 90vh;
   background-image: url("../../../../public/img/homewave.svg");
   background-position: center;
   background-size: cover;
@@ -27,15 +24,15 @@
   height: 25rem !important;
 }
 
-.missionImg {
+/* .missionImg {
   width: 50%;
-}
+} */
 
-#missionImg {
+/* #missionImg {
   border-top-right-radius: 50%;
   border-bottom-right-radius: 50%;
-}
+} */
 
-.storyImg {
+/* .storyImg {
   width: 50%;
-}
+} */

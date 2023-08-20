@@ -1,11 +1,11 @@
 "use client";
 
-import "./carousel/Carousel.css";
-import React, { useEffect, useState } from "react";
-import { Testmony } from "./Testmony";
-import { CarouselComponent } from "./carousel/Carousel";
-import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import Link from "next/link";
+import React, { useEffect, useState } from "react";
+import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
+import { Testimony } from "./Testmony";
+import { CarouselComponent } from "./carousel/Carousel";
+import "./carousel/Carousel.css";
 
 export const Testmonials = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -101,8 +101,8 @@ export const Testmonials = () => {
             currentIndex={currentIndex}
             setCurrentIndex={setCurrentIndex}
           >
-            {[1, 2, 3, 4, 5, 6, 7, 8].map((item) => {
-              return <Testmony />;
+            {[1, 2, 3, 4, 5, 6, 7, 8].map((item, index) => {
+              return <Testimony key={index} />;
             })}
           </CarouselComponent>
           {/* </div> */}
@@ -128,7 +128,7 @@ export const Testmonials = () => {
             </button>
           )}
         </div>
-        <div className="my-5 bg-gray-100 ">
+        <div className="my-5 bg-white ">
           <Link href="/testmonials" className=" button-2 py-2 text-white px-7 w-fit text-[14px] rounded-sm ">
             Read More Testimonials
           </Link>

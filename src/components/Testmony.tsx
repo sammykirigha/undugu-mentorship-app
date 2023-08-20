@@ -1,8 +1,7 @@
 import Image from "next/image";
 import image from "../../public/Our_MP.jpg";
-import React from "react";
 
-export const Testmony = () => {
+export const Testimony = () => {
   return (
     <div className="relative w-full bg-white lg:w-96 flex flex-col items-center justify-center">
       <Image
