@@ -1,3 +1,5 @@
+[![Build Status](https://dev.azure.com/samuelkirigha/samuelkirigha/_apis/build/status%2Fsammykirigha.undugu-mentorship-app?branchName=main)](https://dev.azure.com/samuelkirigha/samuelkirigha/_build/latest?definitionId=2&branchName=main)
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
