@@ -24,7 +24,7 @@ steps:
 - task : NodeTool@0
   inputs:
     versionSpec: '18.x'
-      displayName : "Npm RUN BUILD"
+  displayName : "Npm RUN BUILD"
 - script: |
     cd ui
     ls -la
