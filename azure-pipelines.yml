@@ -16,6 +16,16 @@ steps:
   displayName: 'Install Node.js'
 
 - script: |
-    npm install
+    cd ui
+    npm ci
+    displayName: 'Npm CI'
+
+
+- task : NodeTool@0
+  inputs:
+    versionSpec: '18.x'
+      displayName : "Npm RUN BUILD"
+- script: |
+    cd ui
+    ls -la
     npm run build
-  displayName: 'npm install and build'
