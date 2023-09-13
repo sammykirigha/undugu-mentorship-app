@@ -1,16 +1,14 @@
 import Image from "next/image";
-import logo from "./../public/logo-two.jpg"
 
-
-function Logo(props: any){
-    const {renderDefault, titile} = props;
+function Logo(props: any) {
+    const { renderDefault, titile } = props;
 
     return (
         <div className="!flex !items-center space-x-2">
-            <Image alt="logo" src={logo} width={70} height={70} className="!rounded-full !object-cover" />
+            <Image alt="logo" src={"/logo-two.jpg"} width={70} height={70} className="!rounded-full !object-cover" />
             {renderDefault && <>{renderDefault(props)}</>}
         </div>
-    )
+    );
 }
 
 export default Logo;
