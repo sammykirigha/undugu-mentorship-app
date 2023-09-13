@@ -6,29 +6,29 @@ import Link from "next/link";
 
 function Footer() {
   return (
-    <div className=" flex flex-col items-center justify-center w-full">
+    <div className="flex flex-col items-center justify-center w-full ">
       <div className="w-full flex items-center justify-center opacity-90 px-5 md:px-0 bg-gradient-to-r from-[#105175] to-[#032030]">
-        <div className="py-3 flex flex-col items-center">
+        <div className="flex flex-col items-center py-8">
           <h2 className="text-white text-[1.5rem]  font-semibold ">
-            Nesletter Sign Up
+            Newsletter Sign Up
           </h2>
           <p className="text-white text-[0.9rem] md:text-[1.1rem] leading-[1.3rem] py-3 text-center">
             Send me a notification on the upcoming and current events!
           </p>
-          <div className="mt-2 flex flex-col items-center gap-3 md:flex-row md:gap-0">
+          <div className="flex flex-col items-center gap-3 mt-2 md:flex-row md:gap-0">
             <input
               className="w-[250px] md:w-[300px] h-[45px] px-3 focus:outline-0"
               placeholder="example@email.com"
             />
-            <button className="bg-[#ff6100] hover:bg-[#f3a676] hover:transition-all hover:duration-700 h-[45px] w-fit px-4 py-2 text-white uppercase font-semibold">
+            <button className="hover:bg-[#151538] bg-[#1ea2a0] hover:transition-all hover:duration-700 h-[45px] w-fit px-4 py-2 text-white uppercase font-semibold">
               Subscribe
             </button>
           </div>
         </div>
       </div>
-      <div className="h-auto bg-blue w-full px-12">
-        <div className="flex flex-col md:flex-row gap-3 md:gap-20 items-start justify-center ">
-          <div className=" mt-8">
+      <div className="w-full h-auto px-12 bg-blue">
+        <div className="flex flex-col items-start justify-center gap-3 md:flex-row md:gap-20 ">
+          <div className="mt-8 ">
             <div className="mt-2">
               <h2 className="text-white text-[1rem]">
                 UnduguMentorshipProgram
@@ -36,7 +36,7 @@ function Footer() {
               <p className="text-white text-[0.8rem] py-3">
                 Follow Us To Learn More
               </p>
-              <div className=" flex flex-row gap-4 pb-5 ">
+              <div className="flex flex-row gap-4 pb-5 ">
                 <Link
                   legacyBehavior
                   href={"https://www.facebook.com/UnduguMentorship"}

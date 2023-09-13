@@ -1,146 +1,150 @@
-import { groq } from "next-sanity";
-import { BsFacebook } from "react-icons/bs";
-import { AiFillTwitterSquare, AiOutlineInstagram } from "react-icons/ai";
+import { Testmonials } from "@/src/components/Testmonials";
+import { CheckCircleIcon } from "@heroicons/react/24/solid";
 import Link from "next/link";
-import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
-import { draftMode } from "next/headers";
-import image_one from "../../../public/Mentors_two.jpg";
-import Image from "next/image";
-import RecentEvents from "@/src/components/RecentEvents";
-import { client } from "@/src/lib/sanity.client";
-
-const query = groq`
-*[_type=='post'] {
-  ...,
-  author->,
-  categories->
-} | order(_createdAt desc)
-`;
-
-async function getData() {
-  const { isEnabled } = draftMode();
-  return isEnabled;
-}
 
 export default async function Home() {
-  const isEnabled = await getData();
-  const posts = await client.fetch(query);
-  console.log({ posts }, "<<<<<>>>>", { isEnabled });
-
   return (
-    <div>
-      <div className=" flex w-full mt-[95px] max-w-[1400px] mx-auto ">
-        <div className="flex flex-col lg:flex-row items-start justify-center mt-12 gap-10 w-full pt-3 md:pt-0 px-3 2xl:px-0">
-          <div className="relative w-full">
-            <div className="bg-red-700 w-full">
-              <Image
-                src={image_one}
-                alt="image"
-                width={700}
-                height={450}
-                className="object-cover brightness-50 w-full bg-no-repeat"
-              />
-            </div>
-            <p className="absolute bottom-3 text-white text-[1rem] md:text-[1.5rem] lg:text-[2.0rem] font-semibold text-center px-2 ">
-              Mentorship Session At Mwangeka Girls Wundanyi.
+    <div className="bg-white">
+      <div className="relative bg-hero-pattern bg-cover before:z-10 bg-center before:bg-[black]/40 before:h-[100%] before:absolute before:w-full">
+        <div className="min-h-[60vh] flex-col  flex pt-[130px] bg-slate-100_">
+          <div className="container z-20 flex flex-col items-center justify-center flex-1 h-full p-2 sm:p-4 lg:p-0">
+            <h1 className="text-[30px] capitalize leading-[70px] font-bold text-white lg:text-[60px]">
+              Undugu Mentorship Initiative
+            </h1>
+            <p className="max-w-[600px] lg:my-8 mb-6 text-center text-white lg:text-lg ">
+              The organization envisages every responsible adult taking
+              responsibility to offer support, guidance and motivation to the
+              younger generation. We have a pool of mentors working with various
+              schools in the entire Coastal region. Our mentorship curruculum is
+              professionally structured to achieve intended results
             </p>
-          </div>
-          <div className=" w-full lg:w-auto flex flex-col items-start justify-between h-auto ">
-            <div className="w-full flex flex-col items-start">
-              <div className="w-full ">
-                <h1
-                  className="text-primary whitespace-nowrap text-[1.3rem] font-[700] opacity-90 flex 
-              items-center gap-3 before:content-[''] before:h-1 before:w-full 
-              before:bg-primary before:block after:content-[''] 
-              after:h-1 after:w-full after:bg-primary after:block"
-                >
-                  Our Motivation
-                </h1>
-                <p className="text-[1.1rem] text-center text-text leading-tight font-headline mt-2">
-                  Impacting Lives Through Mentorship.
-                </p>
-              </div>
 
-              <div className="flex flex-col mt-5 relative group pb-3 w-full">
-                <h1
-                  className="text-primary  text-[1.3rem] font-[700] opacity-90 flex 
-              items-center"
-                >
-                  Our Mission
-                </h1>
-                <p className=" text-[1rem] text-primary line-clamp-3">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta
-                  recusandae.
-                </p>
-                <div className="absolute hidden  group-hover:block inset-x-0  ease-in-out duration-700 bg-blue bottom-0 h-[2px]"></div>
-              </div>
-
-              <div className="flex flex-col mt-5 relative group pb-3 w-full">
-                <h1
-                  className="text-primary text-[1.3rem] font-[700] opacity-90 flex 
-              items-center"
-                >
-                  Our Vission
-                </h1>
-                <p className=" text-[1rem] text-primary">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta
-                  recusandae.
-                </p>
-                <div className="absolute hidden group-hover:block inset-x-0  ease-in-out duration-700 bg-blue bottom-0 h-[2px]"></div>
-              </div>
-
-              <div className="flex flex-col mt-5 relative group pb-3 w-full">
-                <h1
-                  className="text-primary text-[1.3rem] font-[700] opacity-90 flex 
-              items-center"
-                >
-                  Our Motto
-                </h1>
-                <p className=" text-[1rem] text-primary">
-                  <span className="text-text">Mentoring</span>
-                  <br></br>A promising approach for youth development.
-                </p>
-                <div className="absolute hidden group-hover:block inset-x-0  ease-in-out duration-700 bg-blue bottom-0 h-[2px]"></div>
-              </div>
-            </div>
-            {/* social links */}
-            <div className=" flex flex-row gap-10 lg:hidden 2xl:flex mt-8 xl:mt-[90px] 2xl:mt-[100px]">
+            <div className="flex gap-3 mb-8 ">
               <Link
-                legacyBehavior
-                href={"https://www.facebook.com/UnduguMentorship"}
-                title="Undugu Mentorship Initiative on Facebook"
+                href="about"
+                className="px-8 py-3 text-lg rounded bg-[#1ea2a0] border border-[#1ea2a0] text-white hover:bg-white hover:text-[#1ea2a0] "
               >
-                <a
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-12 h-12 flex items-center justify-center bg-primary rounded-lg cursor-pointer"
-                >
-                  <BsFacebook className="w-8 h-8 text-white text-center bg-primary " />
-                </a>
+                About Us
               </Link>
               <Link
-                href={"/"}
-                title="Undugu Mentorship Initiative on Twitter"
-                className="w-12 h-12 flex items-center justify-center bg-primary rounded-lg cursor-pointer"
+                href="events"
+                className=" px-8  py-3 bg-white border border-[#1ea2a0] hover:bg-[#1ea2a0] hover:text-white text-[#1ea2a0] rounded text-lg  transition"
               >
-                <AiFillTwitterSquare className="w-8 h-8 text-white text-center bg-primary " />
-              </Link>
-              <Link
-                href={"/"}
-                title="Undugu Mentorship Initiative on Instagram"
-                className="w-12 h-12 flex items-center justify-center bg-primary rounded-lg cursor-pointer"
-              >
-                <AiOutlineInstagram className="w-8 h-8 text-white text-center bg-primary " />
+                Our Events
               </Link>
             </div>
           </div>
         </div>
       </div>
 
-      <div className=" mt-6 max-w-[1400px] mx-auto mb-14 px-3 2xl:px-0">
-        <RecentEvents />
+      <div className="flex flex-col-reverse lg:flex-row min-h-[800px]">
+        <div className="lg:flex-1 relative bg-cover h-[250px] lg:h-auto  bg-no-repeat bg-['center left'] bg-hero-pattern lg:bg-hero-pattern">
+          <div className="">
+            <div className="absolute inset-0 bottom-bg-overlay"></div>
+            <div className="absolute inset-x-0 flex justify-center bottom-5">
+              <div className="w-full max-w-xl p-2 mx-auto text-white">
+                <h4 className="text-xl font-bold sm:text-2xl">
+                  Achieve goals and create positive change
+                </h4>
+                <p className="mt-3 tracking-wide">May 12th-14th, 2023</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="flex justify-center flex-1 py-6 bg-[#1ea2a0]">
+          <div className="flex flex-col max-w-[800px] justify-center gap-6 p-2 text-white  md:gap-8 md:p-4 lg:p-16">
+            <h4 className="text-3xl md:text-4xl font-bold leading-[40px]">
+              What Is Our Motivation
+            </h4>
+            <p>
+              Transforming Lives Through Mentorship. The mentees gain by
+              boosting their self-esteem, confidence and desire to excel as well
+              as valuable lessons on life skills, career, positive attitude,
+              avoidance of social evils such as drug abuse, immorality and risky
+              behaviors.
+            </p>
+
+            <hr className="opacity-60" />
+
+            <div className="flex gap-3">
+              <CheckCircleIcon className="w-10 h-10 text-[#1ea2a0] bg-white rounded-full" />
+              <div className="flex-1">
+                <h5 className="text-xl sm:text-2xl">Our Mission</h5>
+                <p className="mt-2 text-sm sm:text-base">
+                  We will partner with interest groups in Education, Religion,
+                  NGOs, Government among others in reaching out to the youth to
+                  affect them positively and empower them to make decisions that
+                  will ultimately improve their way of life.
+                </p>
+              </div>
+            </div>
+
+            <div className="flex gap-3">
+              <CheckCircleIcon className="w-10 h-10 text-[#1ea2a0] bg-white rounded-full" />
+              <div className="flex-1">
+                <h5 className="text-xl sm:text-2xl">Our Vission</h5>
+                <p className="mt-2 text-sm sm:text-base">
+                  To improve the well being of the society by transforming the
+                  thinking of young generation to take responsibility for their
+                  lives by making informed decisions.{" "}
+                </p>
+              </div>
+            </div>
+
+            <div className="flex gap-3">
+              <CheckCircleIcon className="w-10 h-10 text-[#1ea2a0] bg-white rounded-full" />
+              <div className="flex-1">
+                <h5 className="text-xl sm:text-2xl">Our Motto</h5>
+                <p className="mt-2 text-sm sm:text-base">
+                  Giving back to society{" "}
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      
+
+      <Testmonials />
+
+      <div className="bg-[#F7F8F9]">
+        <div className="min-h-[500px] flex flex-col justify-center items-center bg-[url(/assets/overlay-cta.png)] bg-cover bg-no-repeat bg-center bg-opacity-80 p-2">
+          <h2 className="text-2xl md:text-4xl text-center font-bold sm:leading-[60px]">
+            Become the Best Version of Yourself
+          </h2>
+
+          <p className="max-w-xl my-4 text-center md:my-8 ">
+            We are here to help you reach your goals. Sign up for a free
+            consultation today to discover how we can help you on your journey.
+          </p>
+
+          <Link href="/contact-us" className="flex items-center justify-center gap-4  border-[2px] border-[#1ea2a0] hover:bg-[#1ea2a0] hover:text-white text-[#1ea2a0] w-[200px] text-lg py-3 rounded-md">
+            Contact Us
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={1.5}
+              stroke="currentColor"
+              className="w-4 h-4"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"
+              />
+            </svg>
+          </Link>
+        </div>
+      </div>
+
+      {/* Blogs Sample */}
+
+      <div className="bg-white">
+        <div className="container">
+          <div className="flex justify-between"></div>
+        </div>
+      </div>
     </div>
   );
 }

@@ -1,0 +1,38 @@
+.aboutbanner {
+  background-image: url("../../../../public/img/homewave.svg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.banner {
+  width: 100%;
+  display: flex;
+}
+
+.bannerImg {
+  width: 50% !important;
+}
+
+.bannerHeader {
+  width: 50% !important;
+}
+
+.homeimg {
+  width: 50% !important;
+  height: 25rem !important;
+}
+
+/* .missionImg {
+  width: 50%;
+} */
+
+/* #missionImg {
+  border-top-right-radius: 50%;
+  border-bottom-right-radius: 50%;
+} */
+
+/* .storyImg {
+  width: 50%;
+} */

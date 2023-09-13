@@ -1,7 +1,8 @@
 import Image from "next/image";
 
+
 function Logo(props: any) {
-    const { renderDefault, titile } = props;
+    const { renderDefault } = props;
 
     return (
         <div className="!flex !items-center space-x-2">
