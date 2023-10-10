@@ -16,7 +16,6 @@ steps:
   displayName: 'Install Node.js'
 
 - script: |
-    cd ui
     npm ci
     displayName: 'Npm CI'
 
@@ -26,6 +25,5 @@ steps:
     versionSpec: '18.x'
   displayName : "Npm RUN BUILD"
 - script: |
-    cd ui
     ls -la
     npm run build

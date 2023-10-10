@@ -1,8 +1,16 @@
 import { Testmonials } from "@/src/components/Testmonials";
+import { client } from "@/src/lib/sanity.client";
 import { CheckCircleIcon } from "@heroicons/react/24/solid";
 import Link from "next/link";
 
+const getData = async () => {
+  const query = `*[_type=="testimonial"][0..3]`;
+  return await client.fetch(query) as Testimonial[];
+};
+
 export default async function Home() {
+  const data = await getData();
+
   return (
     <div className="bg-white">
       <div className="relative bg-hero-pattern bg-cover before:z-10 bg-center before:bg-[black]/40 before:h-[100%] before:absolute before:w-full">
@@ -105,7 +113,7 @@ export default async function Home() {
         </div>
       </div>
 
-      <Testmonials />
+      <Testmonials testimonials={data} />
 
       <div className="bg-[#F7F8F9]">
         <div className="min-h-[500px] flex flex-col justify-center items-center bg-[url(/assets/overlay-cta.png)] bg-cover bg-no-repeat bg-center bg-opacity-80 p-2">

@@ -22,7 +22,7 @@ module.exports = {
     },
   },
   plugins: [
-    require("@tailwindcss/line-clamp"), require("flowbite/plugin"),
+    require("flowbite/plugin"),
     require('tailwind-scrollbar')({ nocompatible: true }),
   ],
 

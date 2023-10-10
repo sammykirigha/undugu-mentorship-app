@@ -1,34 +1,28 @@
 import Image from "next/image";
-import image from "../../public/profile.gif";
+import { urlForImage } from "../lib/sanity-image";
 
-export const Testimony = () => {
+export const Testimony = ({ testimonial, clamped = true }: { testimonial: Testimonial, clamped?: boolean }) => {
+  console.log(testimonial)
   return (
-    <div className="relative w-full bg-white lg:w-96 hover:transition hover:duration-700 hover:ease-in-out flex flex-col items-center justify-center">
+    <div className="relative w-full p-2 bg-white lg:w-96 hover:transition hover:duration-700 hover:ease-in-out flex flex-col items-center justify-center">
       <Image
-        src={image}
+        src={urlForImage(testimonial?.userAvatar)}
         alt=""
-        className="h-16 w-16 rounded-full absolute top-0 right-[40%]  "
+        width={64}
+        height={64}
+        className="!h-16 !w-16 rounded-full absolute top-0 right-[40%]  "
       />
       <div className="shadow-lg mt-5 border-t-2 border-t-[#239492] flex flex-col items-center justify-center px-3 py-5 ">
         <div className="mt-8">
-          <h2 className="text-[1.1rem] text-primary font-[400]">
-            Samuel Kirigha
+          <h2 className="text-[1.1rem] text-center text-primary font-[400]">
+            {testimonial?.userName}
           </h2>
-          <p className="text-[0.9rem] text-slate-600">Software Engineer</p>
+          <p className="text-[0.9rem] text-center text-slate-600">{testimonial?.userOccupation}</p>
         </div>
-        <div
-          className="h-44
-        overflow-auto scrollbar scrollbar-thumb-slate-300 scrollbar-w-1
-        scrollbar-track-white scrollbar-thumb-rounded-lg  mt-5"
-        >
-          <p className="text-[14px] px-1  leading-6">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.Ducimus
-            laborum quis fugit quasi vero ad placeat tempora repudiandae libero
-            nam.Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus
-            laborum quis fugit quasi vero ad placeat tempora repudiandae libero
-            nam.
-          </p>
-        </div>
+
+        <p className={`text-[14px] px-1 leading-6 text-center flex-1 mt-2 ${clamped && "line-clamp-4"} `}>
+          {testimonial?.description}
+        </p>
       </div>
     </div>
   );

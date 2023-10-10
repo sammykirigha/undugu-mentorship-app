@@ -2,12 +2,15 @@
 
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
-import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import { Testimony } from "./Testmony";
 import { CarouselComponent } from "./carousel/Carousel";
 import "./carousel/Carousel.css";
 
-export const Testmonials = () => {
+interface Iprops {
+  testimonials: Testimonial[]
+}
+
+export const Testmonials = ({ testimonials }: Iprops) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [length, setLength] = useState([1, 2, 3, 4, 5, 6, 7, 8].length);
   const [show, setShow] = useState(3);
@@ -92,7 +95,7 @@ export const Testmonials = () => {
         <p className="text-[1.2rem] text-slate-500 leading-[1rem] mt-2 text-center ">
           Here are some of their success stories
         </p>
-        <div className="py-10 w-full h-full ">
+        <div className="pt-10 w-full h-full ">
           {/* <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-center place-items-center  w-full"> */}
           <CarouselComponent
             handleTouchMove={() => handleTouchMove}
@@ -101,16 +104,16 @@ export const Testmonials = () => {
             currentIndex={currentIndex}
             setCurrentIndex={setCurrentIndex}
           >
-            {[1, 2, 3, 4].map((item, index) => {
-              return <Testimony key={index} />;
+            {testimonials.map((testimonial, index) => {
+              return <Testimony testimonial={testimonial} key={index} />;
             })}
           </CarouselComponent>
           {/* </div> */}
         </div>
       </div>
 
-      <div className="mt-3 flex flex-col items-center justify-center w-full max-w-[1440px] mx-auto">
-        <div className="flex gap-5">
+      <div className="flex flex-col items-center justify-center w-full max-w-[1440px] mx-auto">
+        {/* <div className="flex gap-5">
           {currentIndex > 0 && (
             <button
               onClick={prev}
@@ -127,9 +130,9 @@ export const Testmonials = () => {
               <FaArrowRight className="text-white" />
             </button>
           )}
-        </div>
-        <div className="my-5 bg-white ">
-          <Link href="/testmonials" className=" button-2 py-2 text-white px-7 w-fit text-[14px] rounded-sm ">
+        </div> */}
+        <div className="my-5 py-4 bg-white ">
+          <Link href="/testimonials" className=" button-2 py-2 text-white px-7 w-fit text-[14px] rounded-sm ">
             Read More Testimonials
           </Link>
         </div>

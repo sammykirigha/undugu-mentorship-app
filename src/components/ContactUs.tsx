@@ -1,6 +1,40 @@
+"use client"
+
+import { useForm } from 'react-hook-form';
 import { BsTelephone, BsWechat } from "react-icons/bs";
+import { FaSpinner } from 'react-icons/fa';
+import useFormSpree from "../hooks/useFormSpree";
+
+type FormValues = {
+  name: string;
+  email: string;
+  subject: string;
+  message: string;
+};
 
 const ContactUs = () => {
+
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+    reset,
+  } = useForm<FormValues>()
+
+  const { state, handleSubmit: handleFormSpreeSubmit, resetSpreeState } = useFormSpree('mwkdakqy');
+
+  const handleSendMessage = async (data: FormValues) => {
+    const formData = new FormData();
+
+    formData.append("name", data.name);
+    formData.append("email", data.email);
+    formData.append("subject", data.subject);
+    formData.append("message", data.message);
+
+    const success = await handleFormSpreeSubmit(formData);
+    if (success) reset();
+  }
+
   return (
     <div className="bg-gray-300 min-h-screen w-full h-full">
       <div className="max-w-[1440px] mx-auto w-full mt-[78px] min-h-screen">
@@ -70,43 +104,103 @@ const ContactUs = () => {
                     Feel free to get in touch with us.
                   </p>
                 </div>
-                <div className="flex flex-col gap-3 my-[30px] w-full ">
-                  <div className="flex flex-col ">
-                    <label className="text-[#1ea2a0]">Name</label>
-                    <input
-                      type="text"
-                      className=" mt-1 rounded-md outline-none border border-[#1ea2a0] focus:outline-none focus:border-0 focus:ring-[#1ea2a0]"
-                      placeholder="Enter your Name"
-                    />
-                  </div>
-                  <div className="flex flex-col ">
-                    <label className="text-[#1ea2a0]">Email</label>
-                    <input
-                      type="text"
-                      className=" mt-1 rounded-md outline-none border border-[#1ea2a0] focus:outline-none focus:border-0 focus:ring-[#1ea2a0]"
-                      placeholder="Enter your Email"
-                    />
-                  </div>
-                  <div className="flex flex-col ">
-                    <label className="text-[#1ea2a0]">Subject</label>
-                    <input
-                      type="text"
-                      className=" mt-1 rounded-md outline-none border border-[#1ea2a0] focus:outline-none focus:border-0 focus:ring-[#1ea2a0]"
-                      placeholder="Enter the subject"
-                    />
-                  </div>
-                  <div className="flex flex-col ">
-                    <label className="text-[#1ea2a0]">Message</label>
-                    <textarea
-                      className=" mt-1 rounded-md outline-none border border-[#1ea2a0] focus:outline-none focus:border-0 focus:ring-[#1ea2a0]"
-                      rows={3}
-                    ></textarea>
-                  </div>
 
-                  <button className="my-1 w-fit bg-[#1ea2a0] py-[8px] px-[36px] text-white rounded-md cursor-pointer">
-                    Send
-                  </button>
-                </div>
+                <form
+                  onSubmit={handleSubmit(handleSendMessage)}
+                  autoComplete="off"
+                  className=' w-full'
+                >
+                  {state?.message && state.errored && (
+                    <div className="my-4 bg-red-300 py-2 text-center text-red-700">
+                      <p>{state?.message}</p>
+                    </div>
+                  )}
+
+                  <div className="flex flex-col gap-3 my-[30px] w-full ">
+                    <div className="flex flex-col ">
+                      <label className="text-[#1ea2a0]">Name</label>
+                      <input
+                        type="text"
+                        className={`mt-1 rounded-md outline-none border  focus:outline-none focus:border-0 focus:ring-[#1ea2a0] ${errors?.name ? "border-red-400" : "border-[#1ea2a0]"}`}
+                        placeholder="Enter your Name"
+                        {...register('name', {
+                          required: {
+                            value: true,
+                            message: 'Name is required',
+                          },
+                        })}
+                      />
+                    </div>
+                    <div className="flex flex-col ">
+                      <label className="text-[#1ea2a0]">Email</label>
+                      <input
+                        type="text"
+                        className={`mt-1 rounded-md outline-none border focus:outline-none focus:border-0 focus:ring-[#1ea2a0] ${errors?.email ? "border-red-400" : "border-[#1ea2a0]"}`}
+                        placeholder="Enter your Email"
+                        {...register('email', {
+                          required: {
+                            value: true,
+                            message: 'Email is required',
+                          },
+                        })}
+                      />
+                    </div>
+                    <div className="flex flex-col ">
+                      <label className="text-[#1ea2a0]">Subject</label>
+                      <input
+                        type="text"
+                        className={`mt-1 rounded-md outline-none border focus:outline-none focus:border-0 focus:ring-[#1ea2a0] ${errors?.subject ? "border-red-400" : "border-[#1ea2a0]"}`}
+                        placeholder="Enter the subject"
+                        {...register('subject', {
+                          required: {
+                            value: true,
+                            message: 'Subject is required',
+                          },
+                        })}
+                      />
+                    </div>
+                    <div className="flex flex-col ">
+                      <label className="text-[#1ea2a0]">Message</label>
+                      <textarea
+                        className={`mt-1 rounded-md outline-none border focus:outline-none focus:border-0 focus:ring-[#1ea2a0] ${errors?.message ? "border-red-400" : "border-[#1ea2a0]"}`}
+                        rows={3}
+                        {...register('message', {
+                          required: {
+                            value: true,
+                            message: 'Message is required',
+                          },
+                        })}
+                      ></textarea>
+                    </div>
+                  </div>
+                  {(state.message && state.succeeded) ? (
+                    <div className="my-4 bg-green-200 py-6 text-center rounded-md text-green-700">
+                      <p>{state.message}</p>
+
+                      <button
+                        onClick={resetSpreeState}
+                        type='submit'
+                        className="mt-3 rounded-lg bg-[#1ea2a0] px-4 py-2 text-sm text-white"
+                      >
+                        Send Another Message
+                      </button>
+                    </div>
+                  ) : (
+                    <div className="my-5 flex justify-center">
+                      <button
+                        type="submit"
+                        disabled={state.submitting}
+                        className="cursor-pointer border-0 bg-[#1ea2a0] px-10 py-2 rounded-full text-white outline-none ring-1 ring-accent focus:border-0 focus:outline-none disabled:cursor-not-allowed disabled:bg-opacity-75"
+                      >
+                        {state.submitting ? (
+                          <FaSpinner className="animate-spin" />
+                        ) : (
+                          'Send Message'
+                        )}
+                      </button>
+                    </div>
+                  )}
+                </form>
               </div>
             </div>
           </div>
