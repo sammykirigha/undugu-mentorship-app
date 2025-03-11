@@ -1,7 +1,13 @@
+import AcademicStats from "@/src/components/AcademicsStats";
+import Gallery from "@/src/components/Gallery";
+import Gallery2 from "@/src/components/Gallery2";
+import TestimonialCarousel from "@/src/components/TestimonialCarousel";
 import { Testmonials } from "@/src/components/Testmonials";
 import { client } from "@/src/lib/sanity.client";
 import { CheckCircleIcon } from "@heroicons/react/24/solid";
+import Image from "next/image";
 import Link from "next/link";
+import { FaDollarSign } from "react-icons/fa";
 
 const getData = async () => {
   const query = `*[_type=="testimonial"][0..3]`;
@@ -13,110 +19,129 @@ export default async function Home() {
 
   return (
     <div className="bg-white">
-      <div className="relative bg-hero-pattern bg-cover before:z-10 bg-center before:bg-[black]/40 before:h-[100%] before:absolute before:w-full">
-        <div className="min-h-[60vh] flex-col  flex pt-[130px] bg-slate-100_">
-          <div className="container z-20 flex flex-col items-center justify-center flex-1 h-full p-2 sm:p-4 lg:p-0">
-            <h1 className="text-[30px] capitalize leading-[70px] font-bold text-white lg:text-[60px]">
-              Undugu Mentorship Initiative
-            </h1>
-            <p className="max-w-[600px] lg:my-8 mb-6 text-center text-white lg:text-lg ">
-              The organization envisages every responsible adult taking
-              responsibility to offer support, guidance and motivation to the
-              younger generation. We have a pool of mentors working with various
-              schools in the entire Coastal region. Our mentorship curruculum is
-              professionally structured to achieve intended results
-            </p>
+      <div className="relative bg-hero-pattern bg-cover pt-20 before:z-10 bg-center bg-[black]/60 -[65vh]">
+        <div className="bg-black/60">
+          <div className="min-h-[65vh] flex-col  flex pt-[150px] bg-slate-100_">
+            <div className="container  z-20 flex flex-col items-center justify-center flex-1 h-full p-2 sm:p-4 lg:p-0">
+              <h1 className="text-[30px] capitalize leading-[70px] font-bold text-white lg:text-[60px]">
+                Undugu Mentorship Initiative
+              </h1>
+              <p className="max-w-[600px] lg:my-8 mb-6 text-center text-white lg:text-lg ">
+                The organization envisages every responsible adult taking
+                responsibility to offer support, guidance and motivation to the
+                younger generation. We have a pool of mentors working with various
+                schools in the entire Coastal region. Our mentorship curriculum is
+                professionally structured to achieve intended results
+              </p>
 
-            <div className="flex gap-3 mb-8 ">
-              <Link
-                href="about"
-                className="px-8 py-3 text-lg rounded bg-[#1ea2a0] border border-[#1ea2a0] text-white hover:bg-white hover:text-[#1ea2a0] "
-              >
-                About Us
-              </Link>
-              <Link
-                href="events"
-                className=" px-8  py-3 bg-white border border-[#1ea2a0] hover:bg-[#1ea2a0] hover:text-white text-[#1ea2a0] rounded text-lg  transition"
-              >
-                Our Events
-              </Link>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div className="flex flex-col-reverse lg:flex-row min-h-[800px]">
-        <div className="lg:flex-1 relative bg-cover h-[250px] lg:h-auto  bg-no-repeat bg-['center left'] bg-hero-pattern lg:bg-hero-pattern">
-          <div className="">
-            <div className="absolute inset-0 bottom-bg-overlay"></div>
-            <div className="absolute inset-x-0 flex justify-center bottom-5">
-              <div className="w-full max-w-xl p-2 mx-auto text-white">
-                <h4 className="text-xl font-bold sm:text-2xl">
-                  Achieve goals and create positive change
-                </h4>
-                <p className="mt-3 tracking-wide">May 12th-14th, 2023</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className="flex justify-center flex-1 py-6 bg-[#1ea2a0]">
-          <div className="flex flex-col max-w-[800px] justify-center gap-6 p-2 text-white  md:gap-8 md:p-4 lg:p-16">
-            <h4 className="text-3xl md:text-4xl font-bold leading-[40px]">
-              What Is Our Motivation
-            </h4>
-            <p>
-              Transforming Lives Through Mentorship. The mentees gain by
-              boosting their self-esteem, confidence and desire to excel as well
-              as valuable lessons on life skills, career, positive attitude,
-              avoidance of social evils such as drug abuse, immorality and risky
-              behaviors.
-            </p>
-
-            <hr className="opacity-60" />
-
-            <div className="flex gap-3">
-              <CheckCircleIcon className="w-10 h-10 text-[#1ea2a0] bg-white rounded-full" />
-              <div className="flex-1">
-                <h5 className="text-xl sm:text-2xl">Our Mission</h5>
-                <p className="mt-2 text-sm sm:text-base">
-                  We will partner with interest groups in Education, Religion,
-                  NGOs, Government among others in reaching out to the youth to
-                  affect them positively and empower them to make decisions that
-                  will ultimately improve their way of life.
-                </p>
-              </div>
-            </div>
-
-            <div className="flex gap-3">
-              <CheckCircleIcon className="w-10 h-10 text-[#1ea2a0] bg-white rounded-full" />
-              <div className="flex-1">
-                <h5 className="text-xl sm:text-2xl">Our Vission</h5>
-                <p className="mt-2 text-sm sm:text-base">
-                  To improve the well being of the society by transforming the
-                  thinking of young generation to take responsibility for their
-                  lives by making informed decisions.{" "}
-                </p>
-              </div>
-            </div>
-
-            <div className="flex gap-3">
-              <CheckCircleIcon className="w-10 h-10 text-[#1ea2a0] bg-white rounded-full" />
-              <div className="flex-1">
-                <h5 className="text-xl sm:text-2xl">Our Motto</h5>
-                <p className="mt-2 text-sm sm:text-base">
-                  Giving back to society{" "}
-                </p>
+              <div className="flex gap-3 mb-8 ">
+                <Link
+                  href="about"
+                  className="px-8 py-3 text-lg rounded font-[500] bg-[#ffa500] border border-[#ffa500] text-white hover:bg-white hover:text-[#ffa500] "
+                >
+                  About Us
+                </Link>
+                <Link
+                  href="events"
+                  className=" px-8  py-3 bg-white border font-[500] border-[#ffa500] hover:bg-[#ffa500] hover:text-white text-[#ffa500] rounded text-lg  transition"
+                >
+                  Our Events
+                </Link>
               </div>
             </div>
           </div>
         </div>
       </div>
 
-      <Testmonials testimonials={data} />
+      <div className="w-full py-7 md:py-16 bg-white flex flex-col items-center justify-center px-[10px] md:px-0">
+        <h1 className="text-[28px] text-center font-bold mb-16 text-amber-500">Who We Are and What We Do</h1>
+        <div className="container mx-auto px-4 md:px-6 lg:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {/* Who we are? Card */}
+            <div className="rounded-3xl bg-gray-100 hover:bg-amber-500 shadow-md transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-lg hover:text-white p-8 flex flex-col items-center text-center">
+              <h2 className="text-2xl font-semibold mb-6">Who we are ?</h2>
+              <p className="text-[16px]">
+                Undugu Mentorship Initiative is a registered Non-Governmental Organization working
+                with Secondary Schools students and the youth in counties within the Coast region.
+                The idea was born when likeminded friends came together in 2006 with a view of
+                making a difference in the lives of people and to instill the culture of academic
+                excellence to improve education outcomes.
+              </p>
+            </div>
 
-      <div className="bg-[#F7F8F9]">
-        <div className="min-h-[500px] flex flex-col justify-center items-center bg-[url(/assets/overlay-cta.png)] bg-cover bg-no-repeat bg-center bg-opacity-80 p-2">
+            {/* What we do? Card */}
+            <div className="rounded-3xl bg-gray-100 hover:bg-amber-500 shadow-md transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-lg hover:text-white p-8 flex flex-col items-center text-center">
+              <h2 className="text-2xl font-semibold mb-6">What we do ?</h2>
+              <p className="text-[16px]">
+                Undugu Mentorship Initiative operates in a region that has in no doubt lagged behind
+                in matters of education and development. Hence the need for creation of this
+                organization to help the students ... The organization envisages every responsible
+                adult taking responsibility to offer support, guidance and motivation to the younger
+                generation.
+              </p>
+            </div>
+
+            {/* How we do this? Card */}
+            <div className="rounded-3xl bg-gray-100 hover:bg-amber-500 hover:text-white shadow-md transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-lg  p-8 flex flex-col items-center text-center">
+
+              <h2 className="text-2xl font-semibold mb-6">How we do this?</h2>
+              <p className="text-[16px]">
+                Our model is founded on recruiting mature, responsible and high integrity volunteers
+                who have a passion for volunteerism. These volunteers are tasked to motivate,
+                inspire and share their life experiences with the mentees in order to positively influence
+                them. The mentees gain by boosting their self-esteem, confidence and desire to
+                excel.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="w-full bg-[#063565] text-white py-16">
+        <div className="container mx-auto px-4 md:px-6 lg:px-8 max-w-6xl">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+            <div className="space-y-6">
+              <h2 className="text-4xl font-bold tracking-tight">
+                UNDUGU MENTORSHIP INITIATIVE
+              </h2>
+
+              <div className="w-12 h-1 bg-[#ffa500]"></div>
+
+              <p className="text-gray-300 leading-relaxed">
+                Undugu Mentorship Initiative operates in a region that has in no doubt lagged behind in
+                matters of education and development. The organization envisages every responsible
+                adult taking responsibility to offer support, guidance and motivation to the younger
+                generation. Our model is founded on recruiting mature, responsible and high integrity
+                volunteers who have a passion for volunteerism.
+              </p>
+
+              <div>
+                <Link href="/about" className="inline-block px-6 py-3 bg-yellow-500 text-black font-medium rounded-md hover:bg-yellow-400 transition-colors">
+                  Read More
+                </Link>
+              </div>
+            </div>
+
+            <div className="relative h-80 md:h-96 overflow-hidden">
+              <Image
+                src="/image-3.jpg"
+                alt="Large group of people at an Undugu Mentorship gathering"
+                layout="fill"
+                objectFit="cover"
+                className="rounded-lg"
+                priority
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <TestimonialCarousel />
+
+      <Gallery />
+
+      {/* <div className="bg-[#F7F8F9]">
+        <div className="min-h-auto flex flex-col justify-center items-center bg-cover bg-no-repeat bg-center bg-opacity-80 p-2">
           <h2 className="text-2xl md:text-4xl text-center font-bold sm:leading-[60px]">
             Become the Best Version of Yourself
           </h2>
@@ -126,7 +151,7 @@ export default async function Home() {
             consultation today to discover how we can help you on your journey.
           </p>
 
-          <Link href="/contact-us" className="flex items-center justify-center gap-4  border-[2px] border-[#1ea2a0] hover:bg-[#1ea2a0] hover:text-white text-[#1ea2a0] w-[200px] text-lg py-3 rounded-md">
+          <Link href="/contact-us" className="flex items-center justify-center gap-4  border-[2px] border-[#ffa500] hover:bg-[#ffa500] hover:text-white text-[#ffa500] w-[200px] text-lg py-3 rounded-md">
             Contact Us
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -144,7 +169,9 @@ export default async function Home() {
             </svg>
           </Link>
         </div>
-      </div>
+      </div> */}
+
+      <AcademicStats />
 
       {/* Blogs Sample */}
 

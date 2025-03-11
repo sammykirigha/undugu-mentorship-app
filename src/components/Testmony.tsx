@@ -6,8 +6,8 @@ export const Testimony = ({ testimonial, clamped = true }: { testimonial: Testim
   return (
     <div className="relative w-full p-2 bg-white lg:w-96 hover:transition hover:duration-700 hover:ease-in-out flex flex-col items-center justify-center">
       <Image
-        src={urlForImage(testimonial?.userAvatar)}
-        alt=""
+        src={testimonial?.userAvatar ? urlForImage(testimonial.userAvatar).url() : ""}
+        alt="Beneficiary"
         width={64}
         height={64}
         className="!h-16 !w-16 rounded-full absolute top-0 right-[40%]  "

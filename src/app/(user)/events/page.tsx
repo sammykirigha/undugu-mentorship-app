@@ -1,3 +1,4 @@
+
 import { urlForImage } from "@/src/lib/sanity-image";
 import { client } from "@/src/lib/sanity.client";
 import { isBefore } from "date-fns";
@@ -5,6 +6,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { BsInstagram, BsTwitter } from "react-icons/bs";
 import { SiFacebook } from "react-icons/si";
+import FacebookPost from "./FacebookPost";
 
 const getData = async () => {
   const query = `*[_type=="event"]`;
@@ -16,6 +18,7 @@ async function Page() {
 
   const pastEvents = data?.filter((data: any) => isBefore(new Date(data.date), new Date()));
   const upcomingEvents = data?.filter((data: any) => !isBefore(new Date(data.date), new Date()));
+
 
   return (
     <div className="mt-[50px] md:mt-[80px] xl:mt-[125px] flex flex-col xl:flex-row gap-10 w-full max-w-[1280px] mx-auto pt-5 pb-12 px-[20px] xl:px-0  ">
@@ -34,7 +37,7 @@ async function Page() {
             upcomingEvents?.map((event: any, idx: number) => (
               <div key={idx} className="relative flex gap-3 pb-3 shadow-sm cursor-pointer group">
                 <Image
-                  src={urlForImage(event?.mainImage)}
+                  src={urlForImage(event?.mainImage).url()}
                   alt=""
                   height={150}
                   width={200}
@@ -80,7 +83,7 @@ async function Page() {
             [...upcomingEvents].slice(0, 2)?.map((event: any, idx: number) => (
               <div key={idx} className="relative flex flex-col cursor-pointer">
                 <Image
-                  src={urlForImage(event?.mainImage)}
+                  src={urlForImage(event?.mainImage).url()}
                   alt=""
                   height={350}
                   width={600}
@@ -111,12 +114,13 @@ async function Page() {
         <p className="text-[1.0rem] text-primary leading-[1.2rem] tracking-wide my-3 font-semibold">
           See Our Past Mentoring Events In Different Schools
         </p>
+        <FacebookPost />
         <div className="grid w-full grid-cols-1 gap-6 py-5 sm:grid-cols-1 md:grid-cols-2 xl:flex xl:flex-col">
           {
             pastEvents?.map((event: any, idx: number) => (
               <div key={idx} className="relative flex gap-3 pb-3 shadow-sm cursor-pointer group">
                 <Image
-                  src={urlForImage(event?.mainImage)}
+                  src={urlForImage(event?.mainImage).url()}
                   alt=""
                   height={150}
                   width={200}
