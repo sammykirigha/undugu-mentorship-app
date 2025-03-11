@@ -10,10 +10,6 @@ interface FacebookApiResponse {
     data: FacebookPost[];
 }
 
-//curl -i -X GET curl -i -X GET \
- //"https://graph.facebook.com/v22.0/me?fields=id%2Cname&access_token=EAAHq9zraChMBO83jkZAvOyeSzX58jkJhGE6S7tHejStyZCXL1MDs9O45pEXpg75GQReFljkqZBjiz3wdLUlugqYagzYDShZAf8CQRQck3RpaZAIx4oAcVvv261wahJguxjq6QAJv0ZAs8prKKlNleM2CN5zRoOi7GlTFhspYDK7hLFSO8NXPZAFN2UBRb09Dip4DpdYSqESSAwEtzaBEgZDZD"
-// "https://graph.facebook.com/v22.0/me?fields=id%2Cname&access_token=EAAPUE1qro4gBO7JqfZBrZAZBGbfSrYPOvoLHuVUm02B6kag9OHUINP4rXYOQwZBJSnw8cvQ8B4jp6ScoZAivjIFzQK2tKUFNH1zWWsOSo27ulNulDwZADQsTgPTZCyr6eRexCphceoN3LtGppbAoz7ezX2huB04kQlrZBye7rZCrcx8M2v2AxBZBzrTCK9ZCmWku5M1ey8rZCeUcNLCZC437Asn7eZA6vYNQ7RX70KtsUZD"
-
 export async function GET() {
     const my_url = "https://graph.facebook.com/v22.0/me?fields=id%2Cname&access_token=EAAHq9zraChMBO83jkZAvOyeSzX58jkJhGE6S7tHejStyZCXL1MDs9O45pEXpg75GQReFljkqZBjiz3wdLUlugqYagzYDShZAf8CQRQck3RpaZAIx4oAcVvv261wahJguxjq6QAJv0ZAs8prKKlNleM2CN5zRoOi7GlTFhspYDK7hLFSO8NXPZAFN2UBRb09Dip4DpdYSqESSAwEtzaBEgZDZD"
     const APP_ID = "61569013286511"; //503791912815822
@@ -22,11 +18,18 @@ export async function GET() {
 
     try {
         const response = await axios.get(my_url);
-         console.log("face book posts",response?.data);
+        console.log("facebook posts", response?.data);
         const data: FacebookApiResponse = await response?.data;
-        return data;
+        return new Response(JSON.stringify(data), {
+            status: 200,
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        });
     } catch (error) {
         console.log('Error fetching Facebook posts:', error);
-        throw new Error('Error fetching Facebook posts');
+        return new Response('Error fetching Facebook posts', {
+            status: 500
+        });
     }
 }
