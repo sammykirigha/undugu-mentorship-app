@@ -6,7 +6,7 @@ import { MdLocationOn } from "react-icons/md";
 
 const Footer = () => {
   return (
-    <div className="w-full bg-[#02075d] pt-5 pb-7">
+    <div className="w-full bg-[#063565] pt-5 pb-7">
       <div className="w-full  max-w-[1200px] mx-auto mt-3 flex flex-col md:flex-row items-start px-[20px] lg:items-start gap-[10px] justify-between  lg:gap-[100px]">
         <div className=" flex flex-col">
           <Link href={"/"} className="mt-1 cursor-pointer">

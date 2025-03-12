@@ -63,13 +63,13 @@ const ContactUs = () => {
                   <p className="text-[16px] text-gray-500 leading-4">
                     Call us directly at:
                   </p>
-                  <p className="text-[18px] text-[#1ea2a0] mt-1 font-[600]">
+                  <p className="text-[18px] text-[#ffa500] mt-1 font-[600]">
                     +254 70399875673
                   </p>
                   <span className="text-sm text-text leading-2 pt-0 mt-0 text-center ml-10 mb-0">
                     Or
                   </span>
-                  <p className="text-[18px] text-[#1ea2a0] font-[600]">
+                  <p className="text-[18px] text-[#ffa500] font-[600]">
                     +254 70399875673
                   </p>
                 </div>
@@ -82,7 +82,7 @@ const ContactUs = () => {
                   <p className="text-[16px] text-gray-500 leading-4">
                     Chat with our team lead
                   </p>
-                  <button className="mt-3 bg-[#1ea2a0] py-[8px] px-[20px] text-white rounded-md cursor-pointer">
+                  <button className="mt-3 bg-[#ffa500] py-[8px] px-[20px] text-white rounded-md cursor-pointer">
                     <a target="_blank" href="https://wa.me/254704093039?text=hi,there">
                       Chat with us
                     </a>
@@ -92,7 +92,7 @@ const ContactUs = () => {
             </div>
             <div className="flex-1 flex flex-col w-full items-center bg-white rounded-md shadow-md">
               <div className="flex flex-col w-full items-start justify-start px-[10px] ">
-                <h2 className="text-center text-[24px] py-1 font-[700px] capitalize text-[#1ea2a0] mx-auto">
+                <h2 className="text-center text-[24px] py-1 font-[700px] capitalize text-[#ffa500] mx-auto">
                   Send Us A Message
                 </h2>
                 <div className="flex flex-col">
@@ -118,10 +118,10 @@ const ContactUs = () => {
 
                   <div className="flex flex-col gap-3 my-[30px] w-full ">
                     <div className="flex flex-col ">
-                      <label className="text-[#1ea2a0]">Name</label>
+                      <label className="text-[#ffa500]">Name</label>
                       <input
                         type="text"
-                        className={`mt-1 rounded-md outline-none border  focus:outline-none focus:border-0 focus:ring-[#1ea2a0] ${errors?.name ? "border-red-400" : "border-[#1ea2a0]"}`}
+                        className={`mt-1 rounded-md outline-none border  focus:outline-none focus:border-0 focus:ring-[#ffa500] ${errors?.name ? "border-red-400" : "border-[#ffa500]"}`}
                         placeholder="Enter your Name"
                         {...register('name', {
                           required: {
@@ -132,10 +132,10 @@ const ContactUs = () => {
                       />
                     </div>
                     <div className="flex flex-col ">
-                      <label className="text-[#1ea2a0]">Email</label>
+                      <label className="text-[#ffa500]">Email</label>
                       <input
                         type="text"
-                        className={`mt-1 rounded-md outline-none border focus:outline-none focus:border-0 focus:ring-[#1ea2a0] ${errors?.email ? "border-red-400" : "border-[#1ea2a0]"}`}
+                        className={`mt-1 rounded-md outline-none border focus:outline-none focus:border-0 focus:ring-[#ffa500] ${errors?.email ? "border-red-400" : "border-[#ffa500]"}`}
                         placeholder="Enter your Email"
                         {...register('email', {
                           required: {
@@ -146,10 +146,10 @@ const ContactUs = () => {
                       />
                     </div>
                     <div className="flex flex-col ">
-                      <label className="text-[#1ea2a0]">Subject</label>
+                      <label className="text-[#ffa500]">Subject</label>
                       <input
                         type="text"
-                        className={`mt-1 rounded-md outline-none border focus:outline-none focus:border-0 focus:ring-[#1ea2a0] ${errors?.subject ? "border-red-400" : "border-[#1ea2a0]"}`}
+                        className={`mt-1 rounded-md outline-none border focus:outline-none focus:border-0 focus:ring-[#ffa500] ${errors?.subject ? "border-red-400" : "border-[#ffa500]"}`}
                         placeholder="Enter the subject"
                         {...register('subject', {
                           required: {
@@ -160,9 +160,9 @@ const ContactUs = () => {
                       />
                     </div>
                     <div className="flex flex-col ">
-                      <label className="text-[#1ea2a0]">Message</label>
+                      <label className="text-[#ffa500]">Message</label>
                       <textarea
-                        className={`mt-1 rounded-md outline-none border focus:outline-none focus:border-0 focus:ring-[#1ea2a0] ${errors?.message ? "border-red-400" : "border-[#1ea2a0]"}`}
+                        className={`mt-1 rounded-md outline-none border focus:outline-none focus:border-0 focus:ring-[#ffa500] ${errors?.message ? "border-red-400" : "border-[#ffa500]"}`}
                         rows={3}
                         {...register('message', {
                           required: {
@@ -180,7 +180,7 @@ const ContactUs = () => {
                       <button
                         onClick={resetSpreeState}
                         type='submit'
-                        className="mt-3 rounded-lg bg-[#1ea2a0] px-4 py-2 text-sm text-white"
+                        className="mt-3 rounded-lg bg-[#ffa500] px-4 py-2 text-sm text-white"
                       >
                         Send Another Message
                       </button>
@@ -190,7 +190,7 @@ const ContactUs = () => {
                       <button
                         type="submit"
                         disabled={state.submitting}
-                        className="cursor-pointer border-0 bg-[#1ea2a0] px-10 py-2 rounded-full text-white outline-none ring-1 ring-accent focus:border-0 focus:outline-none disabled:cursor-not-allowed disabled:bg-opacity-75"
+                        className="cursor-pointer border-0 bg-[#ffa500] px-10 py-2 rounded-full text-white outline-none ring-1 ring-accent focus:border-0 focus:outline-none disabled:cursor-not-allowed disabled:bg-opacity-75"
                       >
                         {state.submitting ? (
                           <FaSpinner className="animate-spin" />

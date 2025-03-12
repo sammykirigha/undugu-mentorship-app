@@ -1,4 +1,5 @@
 import AcademicStats from "@/src/components/AcademicsStats";
+import Donation from "@/src/components/Donation";
 import Gallery from "@/src/components/Gallery";
 import Gallery2 from "@/src/components/Gallery2";
 import TestimonialCarousel from "@/src/components/TestimonialCarousel";
@@ -140,40 +141,9 @@ export default async function Home() {
 
       <Gallery />
 
-      {/* <div className="bg-[#F7F8F9]">
-        <div className="min-h-auto flex flex-col justify-center items-center bg-cover bg-no-repeat bg-center bg-opacity-80 p-2">
-          <h2 className="text-2xl md:text-4xl text-center font-bold sm:leading-[60px]">
-            Become the Best Version of Yourself
-          </h2>
-
-          <p className="max-w-xl my-4 text-center md:my-8 ">
-            We are here to help you reach your goals. Sign up for a free
-            consultation today to discover how we can help you on your journey.
-          </p>
-
-          <Link href="/contact-us" className="flex items-center justify-center gap-4  border-[2px] border-[#ffa500] hover:bg-[#ffa500] hover:text-white text-[#ffa500] w-[200px] text-lg py-3 rounded-md">
-            Contact Us
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth={1.5}
-              stroke="currentColor"
-              className="w-4 h-4"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"
-              />
-            </svg>
-          </Link>
-        </div>
-      </div> */}
-
       <AcademicStats />
 
-      {/* Blogs Sample */}
+      <Donation />
 
       <div className="bg-white">
         <div className="container">

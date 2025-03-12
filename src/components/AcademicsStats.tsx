@@ -9,7 +9,7 @@ const AcademicStats = () => {
           <h2 className="text-3xl md:text-4xl font-bold text-gray-800 leading-tight">
             We love to help all the student in the Coastal region attain high academic standards
           </h2>
-          <div className="w-12 h-1 bg-teal-300 mt-6 mb-4"></div>
+          <div className="w-12 h-1 bg-[#ffa500] mt-6 mb-4"></div>
           <p className="text-gray-600">We have ...</p>
         </div>
 

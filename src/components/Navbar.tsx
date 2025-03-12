@@ -96,13 +96,13 @@ const NavBar = () => {
               </a>
             </li>
             <li>
-              <a href={`tel:071111111111`} target='_blank' className="text-black">
-              <strong>Phone: </strong>071111111111
+              <a href={`tel:+254 70399875673`} target='_blank' className="text-black">
+              <strong>Phone: </strong>+254703 998 756
               </a>
             </li>
             <li>
-              <Link href="/contact-us" className="text-black">
-                Contact Us
+              <Link href="/contact-us" className="text-white bg-black px-3 py-1 rounded-[3px] font-[500]">
+                Donate
               </Link>
             </li>
           </ul>
@@ -179,14 +179,14 @@ const NavBar = () => {
               <Link
                 href="/"
                 onClick={() => setShowNavItemsSmallDevice(false)}
-                className="text-[1.2rem] text-white hover:text-text whitespace-nowrap w-fit"
+                className="text-[1.2rem] text-white hover:text-[#ffa500] whitespace-nowrap w-fit"
               >
                 Home
               </Link>
               <Link
                 href="/events"
                 onClick={() => setShowNavItemsSmallDevice(false)}
-                className="text-[1.2rem] text-white hover:text-text whitespace-nowrap"
+                className="text-[1.2rem] text-white hover:text-[#ffa500] whitespace-nowrap"
               >
                 Our Events
               </Link>
@@ -194,14 +194,14 @@ const NavBar = () => {
               <Link
                 href="/about"
                 onClick={() => setShowNavItemsSmallDevice(false)}
-                className="text-[1.2rem] text-white hover:text-text whitespace-nowrap"
+                className="text-[1.2rem] text-white hover:text-[#ffa500] whitespace-nowrap"
               >
                 About
               </Link>
               <Link
                 href="/contact-us"
                 onClick={() => setShowNavItemsSmallDevice(false)}
-                className="text-[1.2rem] text-white hover:text-text whitespace-nowrap"
+                className="text-[1.2rem] text-white hover:text-[#ffa500] whitespace-nowrap"
               >
                 Contact Us
               </Link>
