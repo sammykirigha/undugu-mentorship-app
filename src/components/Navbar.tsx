@@ -165,7 +165,7 @@ const NavBar = () => {
                 onClick={() => setShowNavItemsSmallDevice(!showNavItemsSmallDevice)}
                 className="flex items-end justify-end gap-10 md:justify-center">
                 <span className="">
-                  <MdMenu className="w-10 h-10 text-lg text-white cursor-pointer" />
+                  <MdMenu className="w-10 h-10 text-lg text-black cursor-pointer" />
                 </span>
               </div>
             )}
@@ -174,7 +174,7 @@ const NavBar = () => {
         <hr className="opacity-70" />
 
         <div className={`absolute ${showNavItemsSmallDevice ? 'translate-x-7' : "translate-x-64 "} transition duration-700 ease-in-out top-[78px] right-0 w-64  px-6`}>
-          <div className=" bg-[#1ea2a0] flex items-center justify-center h-[305px]">
+          <div className=" bg-[#ffa500] flex items-center justify-center h-[305px]">
             <ul className="flex flex-col items-start gap-10 py-2">
               <Link
                 href="/"
